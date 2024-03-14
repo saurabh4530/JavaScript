@@ -91,3 +91,6 @@
     let arr=[11,11,22,33,55,66,33,66,99,8586,66,2,656,659,2];
     console.log(duplicate(arr));
 }
+
+
+console.log("last commited");
