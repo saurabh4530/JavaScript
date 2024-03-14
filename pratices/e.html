@@ -1,0 +1,49 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+    let arr=[
+    {"eid":111,"ename":"e1","esal":100000},
+    {"eid":222,"ename":"e2","esal":200000},
+    {"eid":333,"ename":"e3","esal":300000},
+    {"eid":444,"ename":"e4","esal":400000},
+    {"eid":555,"ename":"e5","esal":500000}
+];
+
+document.write(
+    `<table border="1"
+    cellpadding="10px"
+    align="center"
+    cellspacing="10px">
+    <tr>
+    <th>eid</th>
+    <th>ename</th>
+    <th>esal</th>
+    </tr>
+    `
+);
+arr.forEach((rec)=>{
+    document.write(`
+    
+    <tr>
+        <td>${rec.eid}</td>
+        <td>${rec.ename}</td>
+        <td>${rec.esal}</td>
+
+        
+        </tr>
+    
+    
+    `);
+});
+document.write(`</table>`);
+
+
+
+
+
+
+
+
+
+
+</script> 

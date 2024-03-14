@@ -1,0 +1,10 @@
+{
+    "products":[
+        {"id":1,"name":"one","cost":100},
+        {"id":1,"name":"two","cost":1000},
+        {"id":1,"name":"three","cost":1300},
+        {"id":1,"name":"four","cost":1700},
+        {"id":1,"name":"five","cost":180},
+        {"id":1,"name":"six","cost":150}
+    ]
+}

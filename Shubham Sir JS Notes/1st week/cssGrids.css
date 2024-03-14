@@ -1,0 +1,84 @@
+/* Vimp Note =  Never specify the height of the container in percentage in flexbox and grid. Rather use the vh or px units */
+
+
+/* 
+When we specify the height of the cintainer like 100vh and height of the content like 50px then although the content only occupies the 50 px height but the row or column will occupy the rest of the space and make it look empty from some sides. Therefore be sure that the sizes of row and columns are flexible with respect to the content.
+
+* This can be done using.
+        
+Columns =
+    grid-template-columns: repeat(numberOfColumns, minmax(auto, 200px));
+
+Rows = 
+    grid-template-rows: repeat(numberOfRows, minmax(200px, auto));
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    background-color: aqua;
+
+    height: 100vh;
+    width: auto;
+    /* width: 900px; */
+
+    /* grid-template-columns:133px 133px 133px ;
+    grid-template-rows: 133px 133px 133px; */
+
+    /* grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr); */
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 1fr 100px;
+
+    row-gap: 12px;
+    column-gap: 12px;
+}
+
+.item {
+    background-color: blueviolet;
+    height: 100px;
+
+    /* width: 122px; */
+}
+
+.header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 45px;
+    /* ------------------------------------------------------------------------------------------------ */
+
+    /* There are 3 methods to define the length of the rows or columns */
+    /* ------------------------------------------------------------------------------------------------ */
+
+    /* 1st method by using start and end */
+    /* grid-column-start: 1;
+    grid-column-end: 4; */
+
+    /* ------------------------------------------------------------------------------------------------ */
+
+    /* 2nd method by using the shorthand property and specifying the start and end */
+    /* grid-column: 1/4; */
+
+    /* ------------------------------------------------------------------------------------------------ */
+
+    /* 3rd method by using the span and specifying the span of a column or rows */
+    grid-column: span 3;
+
+    /* ------------------------------------------------------------------------------------------------ */
+
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 45px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>
+        <center>remove child element</center>
+    </h1>
+    <ul id="menu">
+        <li>home</li>
+        <li>products</li>
+        <li>services</li>
+        <li>career</li>
+        <li>contact</li>
+    </ul>
+
+    <script>
+        let parent = document.getElementById("menu");
+        // remove 1st element
+        let elm = parent.firstElementChild;
+        //remove 4th element
+        let elm1 = parent.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling;
+        parent.removeChild(elm);
+        parent.removeChild(elm1);
+    </script>
+    <p>''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+    </p>
+    <hr>
+
+    <h1>
+        <center>clone element</center>
+    </h1>
+    <ul id="menu1">
+        <li>
+            <h3>om</h3>
+        </li>
+        <li>
+            <h3>bhatt</h3>
+        </li>
+        <li>
+            <h3>swaha............</h3>
+        </li>
+
+    </ul>
+    <script>
+        let elm2 = document.getElementById("menu1");
+        let clone = elm2.cloneNode(true);
+        document.body.appendChild(clone);
+
+
+    </script>
+
+
+    <p>''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''</p>
+    <hr>
+    <h1>
+        <center>replace element</center>
+    </h1>
+    <ul id="menu2">
+        <li>home</li>
+        <li>products</li>
+        <li>services</li>
+        <li>about us</li>
+        <li>contact</li>
+    </ul>
+
+    <script>
+        let elm3 = document.getElementById("menu2");
+        let newitm = document.createElement("li")
+        newitm.textContent = "career replced list using replace element";
+
+        let pos = elm3.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling;
+        elm3.replaceChild(newitm, pos);
+    </script>
+
+
+<hr>
+
+<hr>
+
+
+</body>
+
+</html>

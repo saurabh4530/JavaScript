@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>
+        <center>DOM Practice</center>
+    </h1>
+    <p id="demo1">hey..........</p>
+
+    <br>
+    <h3>head1</h3>
+    <h3>head2</h3>
+    <h3>head3</h3>
+    <br>
+    <div id="demo2">
+        <h4>head 1</h4>
+        <h4>head 2</h4>
+        <h4>head 3</h4>
+    </div>
+    <br>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, eveniet.</p>
+    <p class="class1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, eveniet.</p>
+    <p class="class1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, eveniet.</p>
+    <p class="class1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, eveniet.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, eveniet.</p>
+    <br>
+    <p>......................................................................</p>
+    <br>
+    <h2> QuerySelector</h2>
+    <h2 class> heading 2</h2>
+    <h2 class="class2"> heading 2</h2>
+    <h2 class="class2"> heading 2</h2>
+
+    <br>
+    <h2 class="class3"> heading 2</h2>
+    <h2 class="class3"> heading 2</h2>
+    <p>......................................................................</p>
+
+    <div id="demo3">
+        <p>hjfjfjhjnm mvmv</p>
+        <h2 class="class3"> heading 2</h2>
+
+        <p class="class4">Lorem ipsum dolor sit.</p>
+        <p class="class4">Lorem ipsum dolor sit.</p>
+        <p class="class4">Lorem ipsum dolor sit.</p>
+        <p>hjfjfjhjnm mvmv</p>
+
+    </div>
+
+    <p></p>
+
+    <script>
+        // Find HTML Elements by Id which context you want to change
+        let elm1 = document.getElementById("demo1");
+        console.log(elm1.innerHTML);// we get text context of element in console
+
+        // using innerHTML property we changes the contxt of selected element
+        elm1.innerHTML = "Hello........";
+        console.log(elm1);
+        console.log(elm1.innerHTML);// we get  changed text context of element in console
+        //...................//.................//..........................//...........//.
+        // Find HTML Elements by tagname which context you want to change
+
+        let elm2 = document.getElementsByTagName("h3");
+        //When you use getElementsByTagName(), it returns a collection of elements, not a single element.
+        //So, you need to iterate over each element in the collection to change their content
+        for (let i = 0; i < elm2.length; i++) {
+            elm2[i].innerHTML = "this is heading 3";
+
+            console.log(elm2[i].innerHTML);
+
+        }
+
+        // change the heading which is into the div
+
+        let elm3 = document.getElementById("demo2");
+
+        let elm4 = elm3.getElementsByTagName("h4");
+        for (let i = 0; i < elm4.length; i++) {
+            elm4[i].innerHTML = "this is heading 4";
+
+        }
+        //................//..................//.....................//....................
+        // Find HTML Elements by className which context you want to change
+        let elm5 = document.getElementsByClassName("class1");
+        for (let i = 0; i < elm5.length; i++) {
+            elm5[i].innerHTML = "here we change the paragraph text context using <b>getElementsByClassName</b>";
+
+        }
+        // Find HTML Elements by using QuerySelector i.e css selector which context you want to change
+        // using QuerySelector we changed only single value ie first one only
+        let elm6 = document.querySelector("h2.class2");
+        elm6.innerHTML = "here we change the contexxt using query selector";
+
+        let elm7 = document.querySelectorAll(".class3")
+        for (let i = 0; i < elm7.length; i++) {
+            elm7[i].innerHTML = "here we used queryselctorall to change the textcontext of element having classname class3; ";
+
+        }
+
+        // apply ueryselectorall on div
+        let elm8 = document.querySelector("#demo3");
+        let elm9 = elm8.querySelectorAll(".class4")
+        for (let i = 0; i < elm9.length; i++) {
+            elm9[i].innerHTML = "here we used queryselctorall to change the textcontext of element having classname class4 which are in the div have id demo3";
+
+        }
+
+    </script>
+</body>
+
+</html>

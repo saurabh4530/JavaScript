@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "../../BW Lecture"
+		},
+		{
+			"path": "../../HTML Practice Sessions"
+		},
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../Microsoft VS Code"
+		},
+		{
+			"path": "../../Project One"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Project One"
+	}
+}

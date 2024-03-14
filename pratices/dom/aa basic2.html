@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Traversing elements i.e JavaScript HTML DOM Navigation</h1>
+    <p><i>(parent child relation in elment , sibling element )</i></p>
+
+    <ul>
+        <li id="demo1">list 1</li>
+        <li>list 2</li>
+        <li>list 3</li>
+        <li>list 4</li>
+    </ul>
+
+    <ul id="demo2">
+        <li>list a</li>
+        <li>list b</li>
+        <li>list c</li>
+        <li>list d</li>
+    </ul>
+    <ul id="demo3">
+        <li>list x</li>
+        <li>list y</li>
+        <li>list z</li>
+        <li>list w</li>
+    </ul>
+
+<ul>
+        <li>list x</li>
+        <li i>list y</li>
+        <li>list z</li>
+        <li id="demo4">list w</li> 
+        <li>list i</li> 
+        <li>list k</li>
+    </ul>
+    
+    <script>
+        //how to select parent from child element
+        let elm = document.getElementById("demo1");
+        // to selecct parent element
+        let parent = elm.parentElement;
+        parent.innerHTML = "here we replace parent li to another text context";
+
+        //...................//................../..................../...........//.........../././.../..
+        //how to select child from parent element
+
+        let elm2 = document.getElementById("demo2");
+        // to select 1st child element
+        let firstchild = elm2.firstElementChild;
+        firstchild.innerHTML =
+            "here we change the text context of 1st child element ";
+        // to select last child element
+        let lastchild = elm2.lastElementChild;
+        lastchild.innerHTML =
+            "here we change the text context of last child element";
+        // to select all child
+
+        let elm3 = document.getElementById("demo3");
+        let allchild = elm3.children;
+        for (let i = 0; i < allchild.length; i++) {
+            allchild[i].innerHTML =
+                "all li ie children of parent ul is replace by  <b>all child<b>";
+        }
+    // sibling element
+    let elm4=document.getElementById("demo4");
+    //here we select previous sibling element"
+    let preElm=elm4.previousElementSibling;
+    preElm.innerHTML="here we select previous sibling element and changed the context";
+    //here we select next sibling element
+    let nextElm=elm4.nextElementSibling;
+    nextElm.innerHTML="here we select next sibling element and changed the context";
+
+    </script>
+</body>
+
+</html>

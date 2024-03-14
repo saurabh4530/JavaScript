@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        Vimp Note =  Never specify the height of the container in percentage in flexbox and grid. Rather use the vh or px units
+        */
+
+        /* 
+        When we specify the height of the cintainer like 100vh and height of the content like 50px then although the content only occupies the 50 px height but the row or column will occupy the rest of the space and make it look empty from some sides. Therefore be sure that the sizes of row and columns are flexible with respect to the content.
+        * This can be done using.
+        
+        Columns =
+        grid-template-columns: repeat(numberOfColumns, minmax(auto, 200px));
+
+        Rows = 
+        grid-template-rows: repeat(numberOfRows, minmax(200px, auto));
+        */
+
+        body {
+            color: #fff;
+            font-family: cursive;
+            text-align: center;
+        }
+
+        #content {
+            /* height: 1200px; */
+            border: 5px solid red;
+            max-width: 960px;
+            margin: 0 auto;
+            display: grid;
+            /* Examples of using Grid properties */
+
+            /* --------------------GRID TEMPLATE COLUMNS--------------------------- */
+
+            /* grid-template-columns: 33.3% 33.3% 33.3%; */
+            /* grid-template-columns: 30% 20% 50%; */
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            /* grid-template-columns: 1fr 3fr 1fr; */
+            /* grid-template-columns: repeat(9, 1fr); */
+            /* grid-template-columns: repeat(3, 1fr); */
+            grid-template-columns: repeat(3, minmax(auto, 1fr));
+            /* grid-template-columns: repeat(3, minmax(1fr, auto)); */
+
+
+            /* --------------------GRID TEMPLATE ROWS------------------------------ */
+
+            /* grid-template-rows: 100px 300px 400px 202px; */
+            /* grid-template-rows: auto 300px 400px 200px; */
+            /* grid-template-rows: minmax(100px, auto) 300px 400px 202px; */
+            /* grid-template-rows: repeat(200px, auto); */
+            /* grid-template-rows: repeat(3, 211px); */
+            /* grid-template-rows: repeat(3, minmax(100px, auto)); */
+            /* grid-template-rows: repeat(auto-fit, minmax(100px, auto)); */
+
+
+            /* ----------------------GRID AUTO ROWS-------------------------------- */
+
+            /* grid-auto-rows: 200px; */
+            grid-auto-rows: minmax(200px, auto);
+
+            /* ----------------------GRID GAPS--------------------------------------*/
+
+            grid-column-gap: 12px;
+            grid-row-gap: 24px;
+            /* grid-gap:12px */
+
+            /* ----------------------GRID LINES--------------------------------------*/
+
+
+        }
+
+        #content div {
+            background: #3bbced;
+            padding: 30px;
+            /* margin: 20px; */
+        }
+
+        #content div:nth-child(even) {
+            background-color: #777;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <div>
+            <p> 1</p>
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure eos, repudiandae quisquam veniam
+                aperiam
+                ratione qui quam odio saepe ipsa totam, aliquam fugiat reprehenderit voluptates ducimus voluptatem
+                architecto cum praesentium eligendi obca Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Molestiae,
+                asperiores exercitationem.ecati ad. Nobis tenetur at eos, mollitia quis enim!
+            </p>
+        </div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+</body>
+
+</html>

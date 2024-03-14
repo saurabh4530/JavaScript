@@ -1,0 +1,372 @@
+<!-- 
+
+! 3D Transform Properties:
+
+1. `transform`:
+   - Description: Applies a 2D or 3D transformation to an element.
+   - Example: `.transform { transform: rotateX(45deg) rotateY(45deg); }`
+
+2. `transform-origin`:
+   - Description: Allows you to change the position on transformed elements.
+   - Example: `.transform-origin { transform-origin: bottom right; }`
+
+3. `transform-style`:
+   - Description: Specifies how nested elements are rendered in 3D space.
+   - Example: `.transform-style { transform-style: preserve-3d; }`
+
+4. `perspective`:
+   - Description: Specifies the perspective on how 3D elements are viewed.
+   - Example: `.perspective { perspective: 800px; }`
+
+5. `perspective-origin`:
+   - Description: Specifies the bottom position of 3D elements.
+   - Example: `.perspective-origin { perspective-origin: bottom; }`
+
+6. `backface-visibility`:
+   - Description: Defines whether or not an element should be visible when not facing the screen.
+   - Example: `.backface-visibility { backface-visibility: hidden; }`
+
+! 3D Transform Methods:
+
+1. `matrix3d(n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n)`:
+   - Description: Defines a 3D transformation, using a 4x4 matrix of 16 values.
+   - Example: `.matrix3d { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }`
+
+2. `translate3d(x,y,z)`:
+   - Description: Defines a 3D translation.
+   - Example: `.translate3d { transform: translate3d(30px, 50px, 20px); }`
+
+3. `translateX(x)`:
+   - Description: Defines a 3D translation, using only the value for the X-axis.
+   - Example: `.translateX { transform: translateX(30px); }`
+
+4. `translateY(y)`:
+   - Description: Defines a 3D translation, using only the value for the Y-axis.
+   - Example: `.translateY { transform: translateY(50px); }`
+
+5. `translateZ(z)`:
+   - Description: Defines a 3D translation, using only the value for the Z-axis.
+   - Example: `.translateZ { transform: translateZ(20px); }`
+
+6. `scale3d(x,y,z)`:
+   - Description: Defines a 3D scale transformation.
+   - Example: `.scale3d { transform: scale3d(1.5, 0.8, 2); }`
+
+7. `scaleX(x)`:
+   - Description: Defines a 3D scale transformation by giving a value for the X-axis.
+   - Example: `.scaleX { transform: scaleX(1.5); }`
+
+8. `scaleY(y)`:
+   - Description: Defines a 3D scale transformation by giving a value for the Y-axis.
+   - Example: `.scaleY { transform: scaleY(0.8); }`
+
+9. `scaleZ(z)`:
+   - Description: Defines a 3D scale transformation by giving a value for the Z-axis.
+   - Example: `.scaleZ { transform: scaleZ(2); }`
+
+10. `rotate3d(x,y,z,angle)`:
+   - Description: Defines a 3D rotation.
+   - Example: `.rotate3d { transform: rotate3d(1, 1, 1, 45deg); }`
+
+11. `rotateX(angle)`:
+   - Description: Defines a 3D rotation along the X-axis.
+   - Example: `.rotateX { transform: rotateX(45deg); }`
+
+12. `rotateY(angle)`:
+   - Description: Defines a 3D rotation along the Y-axis.
+   - Example: `.rotateY { transform: rotateY(45deg); }`
+
+13. `rotateZ(angle)`:
+   - Description: Defines a 3D rotation along the Z-axis.
+   - Example: `.rotateZ { transform: rotateZ(45deg); }`
+
+14. `perspective(n)`:
+   - Description: Defines a perspective view for a 3D transformed element.
+   - Example: `.perspective-method { transform: perspective(800px); }`
+
+ -->
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS 3D Transform Properties and Methods</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .example {
+      width: 200px;
+      height: 200px;
+      background-color: #3498db;
+      color: #fff;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    /* 3D Transform Properties */
+    .transform {
+      transform: rotateX(45deg) rotateY(45deg);
+    }
+
+    .transform-origin {
+      transform-origin: bottom right;
+    }
+
+    .transform-style {
+      transform-style: preserve-3d;
+    }
+
+    .perspective {
+      perspective: 800px;
+      transform-style: preserve-3d;
+    }
+
+    .perspective-origin {
+      perspective-origin: bottom;
+    }
+
+    .backface-visibility {
+      backface-visibility: hidden;
+    }
+
+    /* 3D Transform Methods */
+    .matrix3d {
+      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+
+    .translate3d {
+      transform: translate3d(30px, 50px, 20px);
+    }
+
+    .translateX {
+      transform: translateX(30px);
+    }
+
+    .translateY {
+      transform: translateY(50px);
+    }
+
+    .translateZ {
+      transform: translateZ(20px);
+    }
+
+    .scale3d {
+      transform: scale3d(1.5, 0.8, 2);
+    }
+
+    .scaleX {
+      transform: scaleX(1.5);
+    }
+
+    .scaleY {
+      transform: scaleY(0.8);
+    }
+
+    .scaleZ {
+      transform: scaleZ(2);
+    }
+
+    .rotate3d {
+      transform: rotate3d(1, 1, 1, 45deg);
+    }
+
+    .rotateX {
+      transform: rotateX(45deg);
+    }
+
+    .rotateY {
+      transform: rotateY(45deg);
+    }
+
+    .rotateZ {
+      transform: rotateZ(45deg);
+    }
+
+    .perspective-method {
+      transform: perspective(800px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 3D Transform Properties -->
+  <div class="example transform">Transform: rotateX(45deg) rotateY(45deg)</div>
+  <div class="example transform-origin">Transform Origin: bottom right</div>
+  <div class="example transform-style">Transform Style: preserve-3d</div>
+  <div class="example perspective">Perspective: 800px</div>
+  <div class="example perspective-origin">Perspective Origin: bottom</div>
+  <div class="example backface-visibility">Backface Visibility: hidden</div>
+
+  <!-- 3D Transform Methods -->
+  <div class="example matrix3d">Matrix3D</div>
+  <div class="example translate3d">Translate3D: translate3d(30px, 50px, 20px)</div>
+  <div class="example translateX">TranslateX: translateX(30px)</div>
+  <div class="example translateY">TranslateY: translateY(50px)</div>
+  <div class="example translateZ">TranslateZ: translateZ(20px)</div>
+  <div class="example scale3d">Scale3D: scale3d(1.5, 0.8, 2)</div>
+  <div class="example scaleX">ScaleX: scaleX(1.5)</div>
+  <div class="example scaleY">ScaleY: scaleY(0.8)</div>
+  <div class="example scaleZ">ScaleZ: scaleZ(2)</div>
+  <div class="example rotate3d">Rotate3D: rotate3d(1, 1, 1, 45deg)</div>
+  <div class="example rotateX">RotateX: rotateX(45deg)</div>
+  <div class="example rotateY">RotateY: rotateY(45deg)</div>
+  <div class="example rotateZ">RotateZ: rotateZ(45deg)</div>
+  <div class="example perspective-method">Perspective Method: perspective(800px)</div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS 3D Transform Properties and Methods</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .example {
+      width: 200px;
+      height: 200px;
+      margin: 5%;
+      background-color: #3498db;
+      color: #fff;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    /* 3D Transform Properties */
+    .transform {
+      transform: rotateX(45deg) rotateY(45deg);
+    }
+
+    .transform-origin {
+      transform-origin: bottom right;
+    }
+
+    .transform-style {
+      transform-style: preserve-3d;
+    }
+
+    .perspective {
+      perspective: 800px;
+      transform-style: preserve-3d;
+    }
+
+    .perspective-origin {
+      perspective-origin: bottom;
+    }
+
+    .backface-visibility {
+      backface-visibility: hidden;
+    }
+
+    /* 3D Transform Methods */
+    .matrix3d {
+      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+
+    .translate3d {
+      transform: translate3d(30px, 50px, 20px);
+    }
+
+    .translateX {
+      transform: translateX(30px);
+    }
+
+    .translateY {
+      transform: translateY(50px);
+    }
+
+    .translateZ {
+      transform: translateZ(20px);
+    }
+
+    .scale3d {
+      transform: scale3d(1.5, 0.8, 2);
+    }
+
+    .scaleX {
+      transform: scaleX(1.5);
+    }
+
+    .scaleY {
+      transform: scaleY(0.8);
+    }
+
+    .scaleZ {
+      transform: scaleZ(2);
+    }
+
+    .rotate3d {
+      transform: rotate3d(1, 1, 1, 45deg);
+    }
+
+    .rotateX {
+      transform: rotateX(45deg);
+    }
+
+    .rotateY {
+      transform: rotateY(45deg);
+    }
+
+    .rotateZ {
+      transform: rotateZ(45deg);
+    }
+
+    .perspective-method {
+      transform: perspective(800px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 3D Transform Properties -->
+  <div class="example transform">Transform: rotateX(45deg) rotateY(45deg)</div>
+  <div class="example transform-origin">Transform Origin: bottom right</div>
+  <div class="example transform-style">Transform Style: preserve-3d</div>
+  <div class="example perspective">Perspective: 800px</div>
+  <div class="example perspective-origin">Perspective Origin: bottom</div>
+  <div class="example backface-visibility">Backface Visibility: hidden</div>
+
+  <!-- 3D Transform Methods -->
+  <div class="example matrix3d">Matrix3D</div>
+  <div class="example translate3d">Translate3D: translate3d(30px, 50px, 20px)</div>
+  <div class="example translateX">TranslateX: translateX(30px)</div>
+  <div class="example translateY">TranslateY: translateY(50px)</div>
+  <div class="example translateZ">TranslateZ: translateZ(20px)</div>
+  <div class="example scale3d">Scale3D: scale3d(1.5, 0.8, 2)</div>
+  <div class="example scaleX">ScaleX: scaleX(1.5)</div>
+  <div class="example scaleY">ScaleY: scaleY(0.8)</div>
+  <div class="example scaleZ">ScaleZ: scaleZ(2)</div>
+  <div class="example rotate3d">Rotate3D: rotate3d(1, 1, 1, 45deg)</div>
+  <div class="example rotateX">RotateX: rotateX(45deg)</div>
+  <div class="example rotateY">RotateY: rotateY(45deg)</div>
+  <div class="example rotateZ">RotateZ: rotateZ(45deg)</div>
+  <div class="example perspective-method">Perspective Method: perspective(800px)</div>
+
+</body>
+</html>

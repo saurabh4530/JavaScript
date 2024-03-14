@@ -1,0 +1,75 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .example {
+        width: 100px;
+        height: 100px;
+        background-color: #3498db;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px;
+      }
+
+      /* Example 1 - @keyframes Rule */
+      @keyframes slide {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(100px);
+        }
+      }
+
+      /* Example 2 - animation-name */
+      .example {
+        animation-name: slide;
+        animation-duration: 1s;
+        /* animation-delay: 2s; */
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 3;
+        animation-direction: alternate;
+        animation-fill-mode: forwards;
+      }
+
+      /* Example 3 - animation-duration */
+      /* .example.animation-duration {
+        animation-duration: 2s;
+      } */
+    </style>
+  </head>
+  <body>
+
+  <!-- Example 1 - @keyframes Rule -->
+  <div class="example">1</div>
+
+  
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

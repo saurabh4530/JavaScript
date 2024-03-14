@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            color: white;
+            font-size: 25px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        <center>DOM Events</center>
+    </h1>
+    <br><br>
+    <h2>
+        <center>inline</center>
+    </h2>
+    <center><button id="btn" onclick="btnclick()"> click me !</button></center><br><br><br>
+    <h2>
+        <center> using addeventlistener</center>
+    </h2>
+
+    <center><button id="btn1"> SUBMIT !</button></center><br><br><br>
+
+    <script>
+        //inline
+        function btnclick() {
+            alert("button was clicked......!");
+
+        }
+        //  using addeventlistener
+        let btn1 = document.getElementById("btn1");
+        //  btn1.addEventListener("click",btnclick);//click is event n btnclick is func , we can pass arrow func
+        btn1.addEventListener("click", () => {
+            alert("button was clicked by using arrow function...... it is onclick event !");
+        })
+    </script>
+    <hr>
+    <h2>
+        <center>  onclick  and mouseout event </center>
+    </h2>
+
+    <center><button id="btn2"> SUBMIT !</button></center><br><br><br>
+    <h2>        <center>  mouseover event </center>
+    </h2>
+    <center><button id="btn3"> SUBMIT !</button></center><br><br><br>
+
+    <script>
+        let btn2=document.getElementById("btn2");
+    
+//onclick event
+        btn2.addEventListener("click",()=>{
+            alert("onclick event completed successfully");
+        })
+        //mouseout event
+        btn2.addEventListener("mouseout",()=>{
+            alert("mouseout event is activated");
+        })
+//mouseover
+        let btn3=document.getElementById("btn3");
+        btn3.addEventListener("mouseover",()=>{
+            alert("mouseover event is activated");
+        })
+    </script>
+    <hr>
+    <h2>
+        <center>same click events on one element</center>
+    </h2>
+
+    <center><button id="btn4"> SUBMIT !</button></center><br><br><br>
+<p>must remember: here we apply removeEventListener to remove click2 so its not work here but if modify code it will work</p>
+
+<script>
+    let btn4=document.getElementById("btn4");
+    function click1() {
+        alert(" first onclick event activated");   
+    }
+    function click2() {
+        alert(" second onclick event activated");   
+    }
+    btn4.addEventListener("click",click1);
+    btn4.addEventListener("click",click2);
+
+    //remove event
+    btn4.removeEventListener("click",click2)
+</script>
+
+<hr>
+<h2>
+    <center>page load event</center>
+</h2>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

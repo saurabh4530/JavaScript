@@ -1,0 +1,155 @@
+<!-- 
+! CSS Gradients
+
+? CSS has three types of gradients:
+
+- Linear Gradients (goes down/up/left/right/diagonally)
+- Radial Gradients (defined by their center)
+- Conic Gradients (rotated around a center point)
+
+?    Linear Gradient Examples
+
+.linear-gradient-example1: Horizontal linear gradient from #ff7e5f to #feb47b.
+.linear-gradient-example2: Diagonal linear gradient at 45 degrees from #3498db to #2ecc71.
+.linear-gradient-example3: Vertical linear gradient from #e74c3c to #2980b9 to #27ae60.
+.linear-gradient-example4: Horizontal linear gradient from red to yellow.
+
+? Radial Gradient Examples:
+
+.radial-gradient-example1: Radial gradient with a circle shape from #3498db to #2ecc71.
+.radial-gradient-example2: Radial gradient with a circle shape at a specific position from #e74c3c to #2980b9.
+.radial-gradient-example3: Radial gradient with a circle shape at the top right corner from #ff9a9e to #fad0c4.
+.radial-gradient-example4: Radial gradient with the shape defined by the closest side from #3498db to #2ecc71.
+.radial-gradient-example5: Radial gradient with an elliptical shape from the farthest corner at a specific position from #e74c3c to #2980b9.
+.radial-gradient-example6: Radial gradient with an elliptical shape from the farthest corner at a different position from #3498db to #2ecc71.
+
+? Conic Gradient Examples:
+
+.conic-gradient-example1: Conic gradient with colors #3498db, #2ecc71, and #e74c3c arranged in a circular pattern.
+.conic-gradient-example2: Conic gradient with multiple color stops at different angles.
+.conic-gradient-example3: Conic gradient from the top with colors `#3498db
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Gradients</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .example {
+      width: 50%;
+      height: 50vh;
+      margin: 10px;
+      padding: 20px;
+      color: #fff;
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    /* Linear Gradient Examples */
+    .linear-gradient-example1 {
+      background: linear-gradient(to right, red, orange);
+    }
+
+    .linear-gradient-example2 {
+      background: linear-gradient(45deg, red, orange, yellow);
+    }
+
+    .linear-gradient-example3 {
+      background: linear-gradient(to bottom, #e74c3c, #2980b9, #27ae60);
+    }
+
+    .linear-gradient-example4 {
+      background: linear-gradient(90deg, #f06, #9f6);
+    }  
+
+    .linear-gradient-example5 {
+      background-image: repeating-linear-gradient(red, yellow 10%, green 20%);
+}
+
+    /* Radial Gradient Examples */
+    .radial-gradient-example1 {
+      /* background: radial-gradient(circle, blue, green); */
+      /* background: radial-gradient(200px, blue, green); */
+      background: radial-gradient(400px, blue, green);
+    }
+
+    /* The SUNSET example */
+    .radial-gradient-example2 {
+      background: radial-gradient(400px at 50% 100%, rgba(255, 0, 0, 0.853), orange, #ffa2008b);
+    }
+
+    .radial-gradient-example3 {
+      background: radial-gradient(circle at top right, #ff9a9e, #fad0c4);
+    }
+
+    .radial-gradient-example4 {
+      background: radial-gradient(circle closest-side at 30% 40%, #3498db, #2ecc71);
+    }
+
+    .radial-gradient-example5 {
+      background: radial-gradient(ellipse at 20% 40%, #e74c3c, #2980b9);
+    }
+
+    .radial-gradient-example6 {
+      background: radial-gradient(ellipse at 80% 80%, #3498db, #2ecc71);
+    }
+
+    /* Conic Gradient Examples */
+    .conic-gradient-example1 {
+      background: conic-gradient(from -45deg at center, #3498db, #2ecc71, #e74c3c);
+    }
+
+    .conic-gradient-example2 {
+      background: conic-gradient(from 0deg, #3498db 0%, #2ecc71 25%, #e74c3c 50%, #f06 75%, #9f6 100%);
+    }
+
+    .conic-gradient-example3 {
+      background: conic-gradient(from 90deg, #3498db, #2ecc71, #e74c3c);
+    }
+
+    .conic-gradient-example4 {
+      background: conic-gradient(rgba(255, 0, 0, 0.8), yellow, green);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Linear Gradient Examples -->
+  <div class="example linear-gradient-example1">Linear Gradient Example 1</div>
+  <div class="example linear-gradient-example2">Linear Gradient Example 2</div>
+  <div class="example linear-gradient-example3">Linear Gradient Example 3</div>
+  <div class="example linear-gradient-example4">Linear Gradient Example 4</div>
+  <div class="example linear-gradient-example5">Linear Gradient Example 5</div>
+
+  <!-- Radial Gradient Examples -->
+  
+  <div class="example radial-gradient-example1">Radial Gradient Example 1</div>
+  <div class="example radial-gradient-example2">Radial Gradient Example 2</div>
+  <div class="example radial-gradient-example3">Radial Gradient Example 3</div>
+  <div class="example radial-gradient-example4">Radial Gradient Example 4</div>
+  <div class="example radial-gradient-example5">Radial Gradient Example 5</div>
+  <div class="example radial-gradient-example6">Radial Gradient Example 6</div>
+
+
+  <!-- Conic Gradient Examples -->
+  <div class="example conic-gradient-example1">Conic Gradient Example 1</div>
+  <div class="example conic-gradient-example2">Conic Gradient Example 2</div>
+  <div class="example conic-gradient-example3">Conic Gradient Example 3</div>
+  <div class="example conic-gradient-example4">Conic Gradient Example 4</div>
+
+</body>
+</html>

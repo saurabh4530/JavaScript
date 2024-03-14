@@ -1,0 +1,65 @@
+/* Learning SCSS */
+body {
+  background-color: blue;
+}
+
+.parent h1 {
+  color: red;
+  text-align: center;
+  font-size: large;
+}
+.parent h1:hover {
+  color: green;
+}
+
+.parent2 h1 {
+  color: rgba(208, 234, 246, 0.804);
+}
+
+.p1 {
+  font-size: 12px;
+  font-weight: 800;
+  text-align: center;
+  border: 2px solid black;
+  color: rgba(208, 234, 246, 0.804);
+}
+
+.p2 {
+  font-size: 12px;
+  font-weight: 800;
+  text-align: center;
+  border: 2px solid black;
+  color: red;
+}
+
+.p4 {
+  font-size: 12px;
+  font-weight: 800;
+  text-align: center;
+  border: 2px solid black;
+  color: red;
+}
+
+.inherit, .benificiary {
+  height: 100px;
+  width: 100px;
+  background-color: purple;
+  text-align: center;
+  color: white;
+  border: 2px solid white;
+}
+
+.benificiary {
+  background-color: skyblue;
+  line-height: 100px;
+  color: red;
+}
+
+.button1 {
+  height: 33px;
+  width: 100px;
+  background-color: rgba(237, 136, 47, 0.804);
+  text-align: center;
+  color: rgba(208, 234, 246, 0.804);
+  border: 2px solid rgba(208, 234, 246, 0.804);
+}/*# sourceMappingURL=index.css.map */

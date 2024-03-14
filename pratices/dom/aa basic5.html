@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><center>changing  the  value of attributes</center></h1>
+
+<center><img id="image" src="smile.jpeg" alt="smile" width="250" height="250"  ></center>
+<center><img id="image1" class="photo" src="nature copy.jpeg" alt="nature" width="250" height="250"  ></center>
+
+
+<script>
+    // we can change the attribute by this way or 
+    let elm=document.getElementById("image");
+    elm.src="Sunflower.jpg";
+
+    // or we have another way to change the attribute
+let elm2=document.getElementById("image1");
+ elm2.setAttribute("src","cat.jpg" );
+
+ // to get attribute
+ let val1=elm2.getAttribute("alt");
+ console.log(val1);
+ //to remove the attributes
+ let val2=elm2.removeAttribute("class");
+ // to check is property present or not
+
+ let val3=elm2.hasAttribute("id");
+ console.log(val3);
+
+</script>
+<hr>
+
+
+<h1><center>changing  the inline  style of html</center></h1>
+
+<p id="p1">this is 1st paragraph</p>
+<p id="p2">here we changing the style of html element </p>
+<center><button id="btn">SUBMIT</button></center>
+<br>
+<center><button id="btn1">SUBMIT</button></center>
+
+<script>
+    // we can change multiple css or add
+    let elm4=document.getElementById("btn");
+    elm4.style.cssText="background-color:green; border-color:1px solid-red;font-size: 16px;"
+// here  it automatically replace the exsting css but using (+) ie concat we override the css 
+//elm4.style.cssText+="background-color:purple; border-color:2px solid-pink;font-size: 25px;"
+
+// using setAttributes we can change inline css
+let elm6=document.getElementById("btn1");
+elm6.setAttribute("style","background-color:purple; border-color:2px solid-pink;font-size: 25px;")
+
+
+
+// using this we can change only single single inline css style
+    let elm5=document.getElementById("p2");
+elm5.style.color="blue";
+elm5.style.fontSize="larger";
+elm5.style.fontFamily="Arial";
+
+
+</script>
+
+    
+</body>
+</html>

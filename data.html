@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Counting Process</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  #counting {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+</style>
+</head>
+<body>
+
+<div id="counting">Counting...</div>
+<button id="submitBtn">Submit</button>
+
+<script>
+document.getElementById('submitBtn').addEventListener('click', function() {
+  var countingDiv = document.getElementById('counting');
+  var count = 0;
+  
+  var countingInterval = setInterval(function() {
+    countingDiv.textContent = 'Processing: ' + count;
+    count++;
+    
+    if (count > 100) {
+      clearInterval(countingInterval);
+      countingDiv.textContent = 'Processing completed.';
+    }
+  }, 50); // Adjust speed of counting here (milliseconds)
+});
+</script>
+
+</body>
+</html>

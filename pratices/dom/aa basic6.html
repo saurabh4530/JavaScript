@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn{
+            background-color: rgba(13, 16, 195, 0.758);
+            color: rgb(155, 105, 105);
+            font-size: 20px;
+
+
+        }
+    </style>
+</head>
+<body>
+    <h1><center>Get computed css</center></h1>
+    <center><button id="btn">Submit</button></center>
+
+    <script>
+        let elm=document.getElementById("btn");
+        let css=getComputedStyle(elm);
+        console.log(css.color);
+    </script>
+</body>
+</html>

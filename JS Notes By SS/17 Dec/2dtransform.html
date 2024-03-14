@@ -1,0 +1,363 @@
+<!-- 
+!   2D Transform
+
+? CSS Transform Property:
+ The `transform` property in CSS allows you to apply various 2D and 3D transformations to an element. 
+# 2D Transformation Methods:
+
+? Transform methods : translate , scale , skew , rotate.
+
+? 1. `translate(tx, ty)`:
+   - Moves the element along the X and Y axes.
+   - `tx`: The translation along the X-axis.
+   - `ty`: The translation along the Y-axis.
+
+   Example:
+   syntax -
+   transform: translate(30px, 50px);
+   
+
+2. `rotate(angle)`:
+   - Rotates the element by a specified angle.
+   - `angle`: The rotation angle in degrees.
+
+   Example:
+   syntax -
+   transform: rotate(45deg);
+   
+
+3. `scaleX(sx)`:
+   - Scales the element along the X-axis.
+   - `sx`: The scaling factor along the X-axis.
+
+   Example:
+   syntax -
+   transform: scaleX(1.5);
+   
+
+4. `scaleY(sy)`:
+   - Scales the element along the Y-axis.
+   - `sy`: The scaling factor along the Y-axis.
+
+   Example:
+   syntax -
+   transform: scaleY(0.5);
+   
+
+5. `scale(sx, sy)`:
+   - Scales the element along both the X and Y axes.
+   - `sx`: The scaling factor along the X-axis.
+   - `sy`: The scaling factor along the Y-axis.
+
+   Example:
+   syntax -
+   transform: scale(1.5, 0.5);
+   
+
+6. `skewX(angle)`:
+   - Skews the element along the X-axis.
+   - `angle`: The skew angle in degrees.
+
+   Example:
+   syntax -
+   transform: skewX(30deg);
+   
+
+7. `skewY(angle)`:
+   - Skews the element along the Y-axis.
+   - `angle`: The skew angle in degrees.
+
+   Example:
+   syntax -
+   transform: skewY(30deg);
+   
+
+8. `skew(ax, ay)`:
+   - Skews the element along both the X and Y axes.
+   - `ax`: The skew angle along the X-axis.
+   - `ay`: The skew angle along the Y-axis.
+
+   Example:
+   syntax -
+   transform: skew(30deg, 30deg);
+   
+
+9. `matrix(a, b, c, d, tx, ty)`:
+   - Applies a 2D transformation using a matrix.
+   - `a`, `b`, `c`, `d`: Coefficients of the matrix.
+   - `tx`: The translation along the X-axis.
+   - `ty`: The translation along the Y-axis.
+
+   Example:
+   syntax -
+   transform: matrix(1, 0.5, -0.5, 1, 30, 50);
+   
+
+### Additional Transformations (Examples):
+   - These are additional examples to showcase different variations of the transformation methods.
+
+10. `translate(tx, ty)` Example 2:
+    syntax -
+    transform: translate(-20px, -30px);
+    
+
+11. `translate(tx, ty)` Example 3:
+    syntax -
+    transform: translate(10px, -10px);
+    
+
+12. `rotate(angle)` Example 2:
+    syntax -
+    transform: rotate(-30deg);
+    
+
+13. `rotate(angle)` Example 3:
+    syntax -
+    transform: rotate(90deg);
+    
+
+14. `scaleX(sx)` Example 2:
+    syntax -
+    transform: scaleX(0.8);
+    
+
+15. `scaleY(sy)` Example 2:
+    syntax -
+    transform: scaleY(1.2);
+    
+
+16. `scale(sx, sy)` Example 2:
+    syntax -
+    transform: scale(0.8, 1.2);
+    
+
+17. `skewX(angle)` Example 2:
+    syntax -
+    transform: skewX(-20deg);
+    
+
+18. `skewY(angle)` Example 2:
+    syntax -
+    transform: skewY(-10deg);
+    
+
+19. `skew(ax, ay)` Example 2:
+    syntax -
+    transform: skew(-10deg, -20deg);
+    
+
+20. `matrix(a, b, c, d, tx, ty)` Example 2:
+    syntax -
+    transform: matrix(0.8, 0.2, -0.2, 1.2, 20, 30);
+    
+
+21. `matrix(a, b, c, d, tx, ty)` Example 3:
+    syntax -
+    transform: matrix(1, 0, 0, 0.5, 0, 0);
+    
+
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Transform Properties and Methods</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 80px;
+        padding: 20px;
+/*    not getting yaar   display: flex;
+        flex-wrap: wrap; */
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .example {
+        width: 100px;
+        height: 100px;
+        margin: 5%;
+        background-color: #3498db;
+        color: #fff;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        background-image:;
+      }
+
+      .translate-example2 {
+        transform: translate(-20px, -200px);
+      }
+
+      .translate-example3 {
+        transform: translate(10px, 100px);
+      }
+
+      .rotate {
+        transform: rotate(45deg);
+      }
+
+      .rotate-example2 {
+        transform: rotate(-60deg);
+      }
+
+      .rotate-example3 {
+        transform: rotate(90deg);
+      }
+
+      /* 3d Rotate examples */
+      .rotate3d{
+        /* transform: rotate3d() */
+      }
+
+      .rotate3d-example2{
+        transform: rotateZ(45deg)
+      }
+
+      .rotate3d-example3{
+        transform: rotateZ(80deg)
+      }
+
+      .scaleX {
+        transform: scaleX(1.5);
+      }
+
+      .scaleX-example2 {
+        transform: scaleX(0.8);
+      }
+
+      .scaleX-example3 {
+        transform: scaleX(0.2);
+      }
+
+      .scaleY {
+        transform: scaleY(0.5);
+      }
+
+      .scaleY-example2 {
+        transform: scaleY(1.2);
+      }
+
+      .scaleY-example3 {
+        transform: scaleY(2);
+      }
+
+      .scale {
+        transform: scale(1.5, 0.5);
+      }
+
+      .scale-example2 {
+        transform: scale(0.8, 1.2);
+      }
+
+      .skewX {
+        transform: skewX(30deg);
+      }
+
+      .skewX-example2 {
+        transform: skewX(-20deg);
+      }
+
+      .skewX-example3 {
+        transform: skewX(10deg);
+      }
+
+      .skewY {
+        transform: skewY(30deg);
+      }
+      
+      .skewY-example2 {
+        transform: skewY(-10deg);
+      }
+
+      .skewY-example3 {
+        transform: skewY(-40deg);
+      }
+
+      .skew {
+        transform: skew(30deg, 30deg);
+      }
+      .skew-example2 {
+        transform: skew(-10deg, -20deg);
+      }
+
+      .matrix {
+        transform: matrix(1, 0.5, -0.5, 1, 30, 50);
+      }
+
+      .matrix-example2 {
+        transform: matrix(0.8, 0.2, -0.2, 1.2, 20, 30);
+      }
+
+      .matrix-example3 {
+        transform: matrix(1, 0, 0, 0.5, 0, 0);
+      }
+
+      /* h1{
+        margin-bottom: 200px;
+      } */
+    </style>
+  </head>
+  <body>
+<h1> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem voluptate quam placeat ipsam, amet sequi ad quos fugit nemo iure?</h1>
+    <!-- Translate -->
+    <div class="example translate">Translate Example 1</div>
+    <div class="example translate-example2">Translate Example 2</div>
+    <div class="example translate-example3">Translate Example 3</div>
+
+    <!-- Rotate -->
+    <div class="example rotate">Rotate Example 1</div>
+    <div class="example rotate-example2">Rotate Example 2</div>
+    <div class="example rotate-example3">Rotate Example 3</div>
+
+    <!-- ScaleX -->
+    <div class="example scaleX">ScaleX Example 1</div>
+    <div class="example scaleX-example2">ScaleX Example 2</div>
+    <div class="example scaleX-example3">ScaleX Example 3</div>
+
+    <!-- ScaleY -->
+    <div class="example scaleY">ScaleY Example 1</div>
+    <div class="example scaleY-example2">ScaleY Example 2</div>
+    <div class="example scaleY-example3">ScaleY Example 3</div>
+
+    <!-- Scale -->
+    <div class="example scale">Scale Example 1</div>
+    <div class="example scale-example2">Scale Example 2</div>
+    <div class="example scale-example3">Scale Example 3</div>
+
+    <!-- SkewX -->
+    <div class="example skewX">SkewX Example 1</div>
+    <div class="example skewX-example2">SkewX Example 2</div>
+    <div class="example skewX-example3">SkewX Example 3</div>
+
+    <!-- SkewY -->
+    <div class="example skewY">SkewY Example 1</div>
+    <div class="example skewY-example2">SkewY Example 2</div>
+    <div class="example skewY-example3">SkewY Example 3</div>
+
+    <!-- Skew -->
+    <div class="example skew">Skew Example 1</div>
+    <div class="example skew-example2">Skew Example 2</div>
+    <div class="example skew-example3">Skew Example 3</div>
+
+    <!-- Matrix -->
+    <div class="example matrix">Matrix Example 1</div>
+    <div class="example matrix-example2">Matrix Example 2</div>
+    <div class="example matrix-example3">Matrix Example 3</div>
+
+    <!-- 3d transform examples using rotate -->
+    <div class="example rotate3d">Rotate Example 1</div>
+    <div class="example rotate3d-example2">Rotate Example 2</div>
+    <div class="example rotate3d-example3">Rotate Example 3</div>
+
+
+  </body>
+</html>

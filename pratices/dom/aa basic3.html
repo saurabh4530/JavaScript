@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=hw, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>
+      <center>create and append element</center>
+    </h1>
+    <div id="demo">
+      <p>this id a p tag............</p>
+    </div>
+    <p>.................div finish.........................................</p>
+<hr>
+    <script>
+      let elm = document.getElementById("demo");
+      //create  new h1 element
+      let h1Elm = document.createElement("h1");
+      //add to document
+      elm.appendChild(h1Elm);
+      //add text to element using method
+      let text = document.createTextNode(
+        "hi i am h1 tag i was appended after p tag"
+      );
+      // text added to the h1 tag
+      h1Elm.appendChild(text);
+      // we are giving classname and id to newly created element
+      h1Elm.className = "demo1 demo2";
+      h1Elm.id = "unique";
+
+      // append in body
+      let h1Elm2 = document.createElement("h1");
+      // text context add using property
+      h1Elm2.textContent = "hi i am h1 tag i was appended in body";
+
+      document.body.appendChild(h1Elm2);
+    </script>
+<p>............................................................</p>
+<hr>
+ <h1><center >lets take another example</center></h1>
+
+<ul id="list">
+    <li>list 1</li>
+    <li>list 2</li>
+    <li>list 3</li>
+    
+</ul>
+
+
+ <script>
+let elm2=document.getElementById("list");
+let li1=document.createElement("li");
+li1.textContent="new list added using create and append";
+elm2.appendChild(li1);
+ </script>
+<p>............................................................</p>
+<hr>
+<h1><center>insert before</center></h1>
+
+<ul id="demo3" >
+  <li>list 1</li>
+  <li>list 2</li>
+  <li>list 3</li>
+  <li>list 4</li>
+  <li>list 5</li>
+  <li>list 6</li>
+  <li>list 7</li>
+</ul>
+<script>
+  let elm3=document.getElementById("demo3");
+  let itm=document.createElement("li");
+  itm.textContent="newly added list by using insertBefore";
+// to add element before list 1
+  let pos=elm3.firstElementChild;
+  elm3.insertBefore(itm,pos);
+
+  
+  // to add element before list 3
+  let itm2 = document.createElement("li");
+  itm2.textContent = "newly added list by using insertBefore";
+  let pos1 = elm3.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling; // Corrected variable name
+  elm3.insertBefore(itm2, pos1);
+
+</script>
+  </body>
+</html>

@@ -1,0 +1,265 @@
+<!-- 
+    ! Text Effects
+
+.text-shadow: Adds a shadow to the text.
+
+.text-color: Changes the text color.
+
+.font-weight: Makes the text bold.
+
+.font-style: Italicizes the text.
+
+.text-transform: Transforms the text to uppercase.
+
+.letter-spacing: Increases the space between characters.
+
+.line-height: Increases the space between lines of text.
+
+.text-decoration: Underlines the text.
+
+.text-align: Centers the text.
+
+.white-space: Prevents text from wrapping and shows an ellipsis if the text overflows.
+
+.word-spacing: Increases the space between words.
+
+.font-size: Increases the font size of the text.
+
+.font-family: Changes the font family of the text.
+
+overflow-wrap: Prevents overflow by breaking long words and wrapping them onto the next line.
+
+word-break: Allows breaking and wrapping of words at any character to prevent overflow.
+
+overflow and text-overflow: Controls how overflowed content is displayed, with ellipsis indicating that text is truncated.
+
+text-justify property specifies the justification method to use when text-align is set to justify.
+
+writing-mode property defines whether lines of text are laid out horizontally or vertically and the direction in which blocks progress.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Text Effects</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .text-shadow {
+        text-shadow: 2px 2px  4px blue;
+      }
+
+      .color {
+        color: darkorange;
+      }
+
+      .font-weight {
+        font-weight:600;
+      }
+
+      .font-style {
+        font-style: italic;
+      }
+
+      .text-transform {
+        text-transform: capitalize;
+      }
+
+      .letter-spacing {
+        letter-spacing: 3px;
+      }
+
+      .line-height {
+        line-height: 10;
+      }
+
+      .text-decoration {
+        text-decoration: underline;
+      }
+
+      .text-align {
+        text-align: center;
+      }
+
+      .white-space {
+        white-space : nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        width: 150px;
+        border: 1px solid #000;
+      }
+
+      .word-spacing {
+        word-spacing: 5px;
+      }
+
+      .font-size {
+        font-size: 25px;
+      }
+
+      .font-family {
+        font-family: cursive;
+      }
+
+      .container {
+        margin-bottom: 20px;
+      }
+
+      .example {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-top: 5px;
+      }
+
+      .overflow-wrap {
+        width: 200px;
+        overflow-wrap:break-word;
+      }
+      
+      .word-break {
+        width: 200px;
+        word-break: break-all;
+      }
+
+
+      .overflow {
+        width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .justify {
+        text-align: justify;
+      }
+      
+      .writing-mode-h {
+        writing-mode: horizontal-tb;
+      }
+
+      .writing-mode-vrl {
+        writing-mode: vertical-rl;
+      }
+      .writing-mode-vlr {
+        writing-mode: vertical-lr;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Text Effects Examples</h1>
+
+    <p class="text-shadow">This text has a shadow effect.</p>
+
+    <p class="color">This text has a specific color.</p>
+
+    <p class="font-weight">This text is bold.</p>
+
+    <p class="font-style">This text is italic.</p>
+
+    <p class="text-transform">This text is uppercase.</p>
+
+    <p class="letter-spacing">This text has increased letter spacing.</p>
+
+    <p class="line-height">This text has increased line height.</p>
+
+    <p class="text-decoration">This text is underlined.</p>
+
+    <p class="text-align">This text is centered.</p>
+
+    <p class="white-space">
+      This text will not wrap onto a new line and will show an ellipsis if it is
+      too long to fit into the box.
+    </p>
+
+    <p class="word-spacing">This text has increased word spacing.</p>
+
+    <p class="font-size">This text has a larger font size.</p>
+
+    <p class="font-family">This text uses a different font family.</p>
+
+    <h2>Overflow Wrap</h2>
+   
+    <div class="container">
+      <p>
+        When the overflow-wrap property is set to break-word, long unbreakable
+        text will wrap onto the next line.
+      </p>
+   
+      <div class="example overflow-wrap">
+        ThisIsAVeryLongWordThatWillBreakAndWrapOntoTheNextLineWithoutOverflowingTheContainer.
+      </div>
+   
+    </div>
+
+
+    <h2>Word Break</h2>
+    <div class="container">
+      <p>
+        With word-break set to break-all, arbitrary breaks will be inserted
+        between characters to prevent overflow.
+      </p>
+      <div class="example word-break">
+        ThisIsAVeryLongWordThatWillBreakAtAnyCharacterToPreventOverflowingTheContainer.
+      </div>
+    </div>
+
+
+    <h2>Overflow</h2>
+    <div class="container">
+      <p>
+        When overflow is set to hidden and text-overflow to ellipsis,
+        overflowing text will be truncated with an ellipsis.
+      </p>
+      <div class="example overflow">
+        This sentence is too long to fit in the container, so it will end
+        with...
+      </div>
+    </div>
+
+
+    <h2>Text Justify</h2>
+    <div class="container">
+      <p>
+        Text justification spreads out the text to align both left and right
+        edges.
+      </p>
+      <div class="example justify" style="width:200px; color:red;">
+        This paragraph is justified. Notice how both the left and right edges
+        are aligned by adjusting the spacing between words.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum, quae facere porro odit nihil ullam nisi totam, eum cum magnam eveniet delectus explicabo, accusamus quisquam ipsum culpa reiciendis quod. Hic, fugit?
+      </div>
+    </div>
+
+
+    <h2>Writing Mode</h2>
+    <div class="container">
+      <p>Horizontal writing mode (default):</p>
+      <div class="example writing-mode-h">
+        This text is in horizontal-tb mode, which is the default writing mode
+        for most languages.
+      </div>
+    </div>
+
+
+    <div class="container">
+      <p>Vertical right-to-left writing mode:</p>
+      <div class="example writing-mode-vrl">
+        This text is in vertical-rl mode, where text runs vertically from right
+        to left.
+      </div>
+    </div>
+
+
+    <div class="container">
+      <p>Vertical left-to-right writing mode:</p>
+      <div class="example writing-mode-vlr">
+        This text is in vertical-lr mode, where text runs vertically from left
+        to right.
+      </div>
+    </div>
+  </body>
+</html>
