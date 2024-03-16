@@ -11,16 +11,27 @@
     </style>
 </head>
 <body>
+    <h1><center>scroll and wheel Events</center></h1>
     <h1>hello</h1>
     <script>
-        // window.addEventListener("scroll",()=>{
-        //     console.log("scrolling");
-        // });
+        window.addEventListener("scroll",()=>{
+            console.log("scrolling");
+        });
         window.addEventListener("wheel", function(event) {
             if (event.deltaY < 0) {
                 console.log("scrolling up.........");
             } else if (event.deltaY > 0) {
                 console.log("scrolling down.........");
+            }
+        });
+
+             window.addEventListener("scroll",()=>{
+            if (window.pageYOffset>200) {
+                document.body.style.background="yellow"
+                
+            } else {
+                document.body.style.background="white"
+
             }
         });
     </script>

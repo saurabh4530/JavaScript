@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="">
+        <h1>focus blur and change event</h1>
+
+        <input type="text" id="myip">
+        <hr>
+        <h1>input event</h1>
+        <input type="text" id="myip1">
+
+    </form>
+    <script>
+let x=document.getElementById("myip")
+x.addEventListener("focus" ,myfocusfun);
+function myfocusfun() {
+    x.style.background="red";
+}
+x.addEventListener("blur" ,myblurfun)
+function myblurfun() {
+    x.style.background="yellow";
+}
+x.addEventListener("change" ,mychangefun)
+function mychangefun() {
+    console.log(this.value);
+
+}
+let x1=document.getElementById("myip1")
+x1.addEventListener("input" ,mychangefun)
+function mychangefun() {
+    console.log(this.value);
+}
+
+    </script>
+    
+</body>
+</html>
