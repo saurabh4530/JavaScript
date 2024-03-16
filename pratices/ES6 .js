@@ -305,7 +305,11 @@ fullName:["saurabh","kakade"],regularDrink:true,city:"pune"})
 
 }
 
-
+{
+  // template literal
+  let age=0;
+  console.log(`${age>=18 ?'eligile for vote':'not eligible'}`);
+}
 
 
 

@@ -9,11 +9,11 @@ let promise1 = new Promise((resolve, reject) => {
 });
 
 promise1.then(
-  (posres) => {
-    console.log(posres);
+  (res) => {
+    console.log(res);
   },
-  (errres) => {
-    console.log(errres);
+  (err) => {
+    console.log(err);
   }
 );
 
