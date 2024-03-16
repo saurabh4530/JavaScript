@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>keyboard key Events</h1>
+    <p>if we used key down  after pressing key we get ouput immediately if we hold it will give continue o/p</p>
+    <p>if we used key up  after pressed key and hold it not give o/p  after releasing it it show o/p</p>
+
+    <script>
+        window.addEventListener("keydown", checkKey);
+    function checkKey(event) {
+        console.log(event.key);
+        
+    }    
+    </script>
+</body>
+</html>

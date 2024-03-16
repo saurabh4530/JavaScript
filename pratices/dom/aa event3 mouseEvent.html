@@ -4,22 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        #box{
-            height: 100px;
-            width: 100px;
-            background-color: blueviolet;
-            display:flex;
-            justify-content: center;
-            text-align: center;
-            align-items: center;
-            height: 20vh; /* This ensures the content is centered vertically */
-    margin: 200px;
-        }
-    </style>
+    <link rel="stylesheet" href="aa event3.css">
+   
 </head>
 <body>
+    <h1> <center>mouse events</center></h1>
+    <h2>click event</h2>
     <div id="box"></div>
+    <hr>
+    
+
 
 
 <script>
@@ -29,6 +23,56 @@
     })
 </script>
 
+<h2>oncontextmenu i.e rightclick menu event  event</h2>
+<
+    <div id="box1"></div>
+    <hr>
+    <script>
+let elm1=document.getElementById("box1");
+elm1.addEventListener("contextmenu",()=>{
+    alert("right click menu event successful...........");
+})
+    </script>
+<h2>double click event</h2>
+<div id="box3"></div>
+    <hr>
+    <script>
+        let elm3=document.getElementById("box3");
+        elm3=addEventListener("dblclick" ,()=>{
+            alert("double click event ......")
+        })
+    </script>
+    <h2>mousedown event</h2>
+    <div id="box4"></div>
+        <hr>
+<script>
+    let elm5=document.getElementById("box4");
+    elm5.addEventListener("mousedown",()=>{
+        alert("mousedown activated");
+    })
 
+</script>
+<h2>mouseup event</h2>
+    <div id="box5"></div>
+        <hr>
+<script>
+    let elm6=document.getElementById("box4");
+    elm6.addEventListener("mouseup",()=>{
+        alert("mousedown activated");
+    })
+
+</script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
