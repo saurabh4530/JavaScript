@@ -23,5 +23,23 @@
         let css=getComputedStyle(elm);
         console.log(css.color);
     </script>
+
+
+<hr>
+<h2><center>how to add array  element as list in ul.</center></h2>
+<ul id="list">
+
+</ul>
+<script>
+    let list=document.getElementById("list");
+    let array=["mango","orange","grapes"];
+array.forEach((element)=>{
+    var listitm=document.createElement("li");
+    listitm.textContent=element;
+    list.appendChild(listitm)
+}
+    
+)
+</script>
 </body>
 </html>

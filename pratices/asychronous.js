@@ -29,3 +29,11 @@ console.log(3>2>1);
 let c=[]+[]
 console.log(typeof c);
 }
+{
+  setTimeout((name)=>console.log(name),1000,"saurabh");
+
+function fun(name) {
+  console.log(name+" is my name");
+  
+}
+}
