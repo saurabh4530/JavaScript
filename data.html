@@ -19,7 +19,13 @@
 
 <div id="counting">Counting...</div>
 <button id="submitBtn">Submit</button>
+<hr>
+<h1>HTML Geolocation</h1>
+<p>Click the button to get your coordinates.</p>
 
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p> 
 <script>
 document.getElementById('submitBtn').addEventListener('click', function() {
   var countingDiv = document.getElementById('counting');
@@ -35,7 +41,27 @@ document.getElementById('submitBtn').addEventListener('click', function() {
     }
   }, 50); // Adjust speed of counting here (milliseconds)
 });
+
+
+
+
+const x = document.getElementById("demo");
+
+function getLocation()  {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
 </script>
 
+</body>
+</html>
 </body>
 </html>
