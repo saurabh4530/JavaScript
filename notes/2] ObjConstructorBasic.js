@@ -20,6 +20,10 @@ let person0 = {
   age : 30,
   describe: function(){
     return `${this.name} is ${this.age} years old.`;
+  },
+   show(){
+    return `${this.name} is ${this.age} years old.`;
+
   }
 }
 

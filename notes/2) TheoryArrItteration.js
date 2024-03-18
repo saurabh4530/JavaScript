@@ -358,7 +358,7 @@ let lastIndex = array.lastIndexOf(item, start);
 
 let indexOfArr = ["Shubham", "Rohit", "Deepak", "Vinay", "Tushar", "Maroti"];
 
-let indexOfResult = indexOfArr.indexOf("Shubham");
+let indexOfResult = indexOfArr.indexOf("Deepak" );
 console.log(indexOfResult);
 
 // eg todo - Finding the index of numbers and strings.

@@ -37,7 +37,7 @@ Promise.resolve().then(function b() {
 /*
 ? JS is basically the synchroinous language but by using some programming methods we can make it asynchronous.
 
-~ Synchronous = This means that the tasks are run one aftere the another. Next task is run only after the previous task is finished. 
+~ Synchronous = This means that the tasks are run one after the another. Next task is run only after the previous task is finished. 
 
 ~ Asynchronous = This means that the task will run simultaneously. This means that the tasks dont wait for other tasks to complete.
 

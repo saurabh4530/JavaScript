@@ -153,7 +153,7 @@ Usage:
 */
 
 
-// Example 1: Basic Getter and Setter
+// Example 1: Basic Get.ter and Setter
 const person = {
     firstName: 'John',
     lastName: 'Doe',

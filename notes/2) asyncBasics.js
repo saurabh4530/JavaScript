@@ -12,7 +12,7 @@ To understand the event loop, it's crucial to distinguish between synchronous (b
 
 - Synchronous (Blocking): Operations are completed one after another. Each operation must wait for the previous one to complete before starting. In our grocery store analogy, this would be like each customer waiting in line for the cashier; no one can skip the line or start checking out before the person in front of them is done.
   
-- Asynchronous (Non-Blocking): JavaScript handles potentially blocking operations like network requests or timers by starting the operation and then moving on to the next task without waiting for the operation to complete. Once the operation finishes, its result is handled. This is like having a system where a customer can place an order, continue shopping, and then pick up the order when it's ready.
+- Asynchronous (Non-Blocking): JavaScript handles potentially blocking operations like network requests or timers by starting the operation and then moving on to the next task without waiting for the operation to complete. Once the operation finishes, its result is handled. This is like having a system where a customer can place an order, continue shopping, and then pick up the order when it's ready. 
 
 ? The Event Loop
 
