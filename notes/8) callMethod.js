@@ -51,7 +51,7 @@ console.log(person.fullName());
 console.log(person.fullName.call(person2));
 
 //? The call method along with the arguments.
-// Where the call mwthod arguments are passed the arguments are always independent of the object and the funtion.
+// Where the call method arguments are passed the arguments are always independent of the object and the funtion.
 
 // SYNTAX EXPLAINED - 
 //? actualObject.itsMethod.call(borrowingObject, arg1, arg2, argN);

@@ -91,7 +91,7 @@ setTimeout(function () { console.log(" Anonymous function in STO") }, 2000);
 // We can cancle the Timeout during the execution using the funciton clearTimeout(timerId). 
 // Every STO returns the timer id to identify the timer so it is also used to stop the STO.
 
-let timerId = setTimeout(() => console.log(' My Timer is cleard so I never print'), 11111);
+let timerId = setTimeout(() => console.log(' My Timer is cleard so I never print'), 111);
 clearTimeout(timerId);
 
 

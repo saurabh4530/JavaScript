@@ -146,3 +146,135 @@
     let arr=[1,2,3,4,5,6,7];
     console.log(Math.max(...arr));
 }
+{
+  // sort ascending /descending
+  let arr=[25,41,52,63,12,100,200,300,36,88,8000,95,21];
+  let arrsort=arr.sort()
+  console.log(arrsort);// not giving proper order;
+
+  let arraysort=arr.sort((a,b)=>{// ascending
+    return a-b;
+  })
+  console.log(arraysort);
+
+// descending
+let arraysortd=arr.sort((a,b)=>{
+  return b-a
+})
+
+console.log(arraysortd);
+}
+{
+  let users = [
+    {
+      empId: 123,
+      name: "Charlie",
+      location: "NYC",
+    },
+    {
+      empId: 234,
+      name: "Bob",
+      location: "WDC",
+    },
+    {
+      empId: 432,
+      name: "Alice",
+      location: "Wonderland",
+    },
+  ];
+  let sort=users.sort((a,b)=>{
+    return (a.name.localeCompare(b.name))
+  })
+  console.log(sort);
+}
+{
+  setTimeout(data,2000,"saurabh",25);
+  function data(namd, age) {
+    console.log(namd, age);
+  }
+  setTimeout((gender, address) => {
+    console.log(gender,address);
+  }, 2000,"m","mh");
+}
+
+{
+ let x= setInterval((name,age)=>{
+  console.log(name,age);
+ },2000,"ram", 25);
+
+setTimeout(()=>{
+  clearInterval(x)
+},10000);
+}
+{
+  let array124 = new Array(1,2,3,4,5,6);
+console.log(array124.at(4));
+console.log(array124.at(-1));
+}
+{
+let a1=[["a"],"b","c","d"];
+let a2=["e","f","g","h"]
+let arr3=a1.concat(a2);
+console.log(arr3);
+arr3[1]="25";
+console.log(arr3);
+console.log(a1);
+arr3[0][1]="63"
+console.log(arr3);
+console.log(a1);
+
+}
+{
+  let a2=["e","f",[25,30,25],"g","h"]
+for(let [k, v] of a2.entries())
+console.log(`${k} ${v}`);
+console.log(a2.flat());
+
+
+}
+{
+  (function z(ame) {
+    console.log("hi.........................."+ame);
+    
+  })("saurabh");
+}
+
+
+{
+  function name1(name) {
+    return {
+      name
+    }
+  } 
+  console.log(name1("saurabh"));
+
+
+  function name2(name) {
+    return 
+           {name}
+  } 
+  console.log(name2("saurabh"));
+
+}
+{
+  // call apply bind
+let obj1={
+  fname:"sam",lname:"kakade",
+  fullName:function(city, pin){
+    return `${this.fname} and ${this.lname} and ${city} ${pin}`
+  }
+
+}
+let obj2={
+  fname:"santosh",lname:"jain",
+  
+
+}
+
+console.log(obj1.fullName("pune",412240));
+
+console.log(obj1.fullName.call(obj2,"chennai",42412));
+console.log(obj1.fullName.apply(obj2,["pune",412632]));
+console.log(obj1.fullName.bind(obj2,"bidar",456123)());
+  
+}

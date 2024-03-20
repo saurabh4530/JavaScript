@@ -142,7 +142,7 @@ console.log(copyArr11); // [1,1]
 // Above copied array will change because it has the referencd of the arr11 and not the actual values
 
 
-let sameReferenceArray2 = (arr1 = [1, 2, 3]) == (arr2 = arr1); // true (both variables reference the same array, and == coerces)
+let sameReferenceArray2 = (arr1 = [1, 2, 3]) === (arr2 = arr1); // true (both variables reference the same array, and == coerces)
 console.log("Same Reference Array Comparison Example 2:", sameReferenceArray2);
 
 // Example 21:

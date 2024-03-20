@@ -80,6 +80,7 @@ promise2()
 function promise3() {
   return new Promise((resolve, reject) => {
     resolve("cheete ki chaal...");
+  
   });
 }
 
