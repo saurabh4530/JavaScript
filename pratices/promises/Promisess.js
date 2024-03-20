@@ -113,3 +113,61 @@ promise3()
 //...........................// ...........................// .....................
 
 
+{
+  new Promise((resolve,reject)=>{
+    console.log("hi.............");
+    let accept=false;
+    if (accept) {
+      resolve("promise fullfilled")
+    } else {
+      reject("promise not fullfilled")
+
+    }
+  }).then((response)=>{
+    console.log(response);
+    return response + "successfully"
+  }).then((response)=>{
+    console.log(response);
+  }).catch((error)=>{
+    console.log(error);
+  })
+}
+{
+  let user = {
+    name: "Abhishek",
+    lname: "Dhone",
+    age : 25,
+    contact : null,
+    adress :{
+        hometown: "Dharashiv",
+        current_location: "Pune"
+    }
+};
+
+let api = JSON.stringify(user);
+
+console.log(api)
+// console.log(JSON.parse(api))
+
+
+
+let p = new Promise(function(resolve, reject){
+    return resolve(JSON.parse(api));
+});
+
+
+p.then(function(result){
+    return result = JSON.parse(api)
+    // console.log(result);
+}).then(function(result){
+    if(!result.contact === null){
+        throw new Error("Contact number is not provided")
+    }
+    console.log(`Name :- ${result.name}  ${result.lname},
+Age:- ${result.age},
+Contact:- ${result.contact} `)
+console.log(result);
+}).catch((err) =>{
+    console.log(console.log(err))
+})
+}

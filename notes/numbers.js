@@ -67,7 +67,7 @@ console.log("Example 6:", numResult, strResult, mixedResult1, mixedResult2);
 // Common mistakes to avoid:
 
 let incorrectResult1 = "The result is: " + 10 + 20;  // Result is "The result is: 1020"
-let incorrectResult2 = 10 + 20 + "30";  // Result is "30"
+let incorrectResult2 = 10 + 20 + "30";  // Result is "3030"
 
 console.log("Example 7:", incorrectResult1, incorrectResult2);
 
@@ -84,6 +84,7 @@ let numericString = "100";  // A string with numeric content
 let divisionResult = numericString / "10";  // Result is a number
 
 console.log("Example 8:", divisionResult);
+console.log(typeof divisionResult);
 
 //! ***************************
 // NaN - Not a Number

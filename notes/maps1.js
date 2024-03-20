@@ -48,6 +48,7 @@ console.log(mapEmt);
 // ---------------- Adding Elements using map.set() method --------------------
 
 mapNumbs.set("sister", 15);
+mapNumbs.set("bhai",29);
 console.log(
   "\n These are the values of mapNumbs after adding new element via set() method : "
 );

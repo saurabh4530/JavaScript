@@ -370,3 +370,40 @@ let result = promiseSum(5, 6);
 result.then((data) => {
   console.log(data);
 });
+
+{
+    function asyncOperation1() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            console.log("Async operation 1 completed");
+            resolve("Result of async operation 1");
+          }, 1000);
+        });
+      }
+      
+      
+       
+      
+      asyncOperation1()
+        .then(result1 => {
+          // Result of asyncOperation1
+          console.log(result1);
+          // Chain asyncOperation2 after asyncOperation1 completes
+           return new Promise((resolve, reject) => {
+          setTimeout((data) => {
+            console.log("Async operation 2 completed with data:", data);
+            resolve("Result of async operation 2");
+          }, 1000);
+        });
+      
+        })
+        .then(result2 => {
+          // Result of asyncOperation2
+          console.log(result2);
+          console.log("All operations completed");
+        })
+        .catch(error => {
+          // Handle errors
+          console.error("Error occurred:", error);
+        });
+}
