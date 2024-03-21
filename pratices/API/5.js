@@ -290,3 +290,5 @@ fetch("https://65fc163914650eb2100b7e6f.mockapi.io/api/v100/user", {
   .catch((err) => {
     console.log(err);
   });
+
+  console.log("updated to git");
