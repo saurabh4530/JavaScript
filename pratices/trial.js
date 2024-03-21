@@ -278,3 +278,59 @@ console.log(obj1.fullName.apply(obj2,["pune",412632]));
 console.log(obj1.fullName.bind(obj2,"bidar",456123)());
   
 }
+{
+  let x=10
+  let y=15
+  let z=20
+  x=y//15
+console.log(  x=y=z);
+}
+{
+  let person1 = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 30,
+    address: {
+      street: "123 Main St",
+      city: "Anytown",
+      country: "USA"
+    }
+}
+let person2 = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 30,
+  address: {
+    street: "123 Main St",
+    city: "Anytown",
+    country: "USA"
+  }
+}
+console.log(person1=person2);
+console.log(NaN=="NaN");
+}
+
+{
+  var a={
+    x:function () {
+      console.log("x");
+      return this;
+    },
+     y:function () {
+      console.log("y");
+      return this;
+
+    },
+    z:function () {
+      console.log("z");
+      return this;
+
+    }
+  }
+  a.x().y().z();  
+  /*x
+    y
+    z
+
+   */
+}

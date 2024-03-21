@@ -108,6 +108,8 @@ console.log(op1.length);
 
 // String slice(start, end)
 let op2 = "Hello this is Shubham Sonar";
+console.log(op2.length);
+
 console.log(op2.slice(14, 27));
 
 let str = "stringify";

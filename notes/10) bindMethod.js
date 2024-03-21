@@ -149,3 +149,4 @@ console.log(setTimeout(displays, 3000));
 
 console.log(setTimeout(person4.display, 3000));
 // Here only display is used. Which is the method that is binded and thus preserves the value of this when it is called.
+

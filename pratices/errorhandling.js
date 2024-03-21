@@ -5,21 +5,25 @@
 try {
   try {
     console.log(name); // ref because we not a assign value to name
-  } catch (err) {
+  } 
+  catch (err) {
     console.log(
-      "give brief explaination about error ........................ "
-    );
+      "give brief explaination about error ........................ ");
     console.log(`${err.name} and ${err.message}`);
   }
+
   let name = "saurabh";
+
   console.log(name()); // typeerror because we take varible and execute it as function
+
 } catch (err) {
+
   console.log("if error plz give the details about error................   ");
   console.log(`${err.name} and ${err.message}`);
-} finally {
+} 
+finally {
   console.log(
-    "execute the code  successfully with or without error..............."
-  );
+    "execute the code  successfully with or without error..............." );
 }
 
 // ..............................//......................................
@@ -110,7 +114,7 @@ catch(err){
 
 
 }finally{
-    console.log("execute the programe successfully");
+    console.log("execute the programme successfully");
 }
 //////////////////////////////////////////////////////
 
@@ -136,7 +140,20 @@ try{
     console.log("done");
 }
 
+{
+  try {
+    let a="Hello, world";
+    // Syntax error example (missing closing parenthesis)
+    console.log(a());
+} catch (error) {
+    if (error instanceof SyntaxError) {// if its syntax error then print if
+        console.error("Syntax error: " + error.message);
+    } else {
+        console.error("An error occurred: " + error.message);// otherwise print else 
+    }
+}
 
+}
 
 
 

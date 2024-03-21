@@ -1,7 +1,10 @@
 //! fetch data using async and await 
 
 async function fetchData(){
-try  {  let request=await fetch("https://gorest.co.in/public/v2/users");
+try  {  
+    let request=await fetch("https://gorest.co.in/public/v2/users");
+    console.log(request);
+
     let data= await request.json();
     console.log(data);}
     catch(error){
@@ -10,3 +13,7 @@ try  {  let request=await fetch("https://gorest.co.in/public/v2/users");
     }
 }
 fetchData();
+{
+    var if =123;
+    console.log(if);
+}

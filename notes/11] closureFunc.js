@@ -40,6 +40,9 @@ const newFunction = outerFunction('outside')
 
 newFunction('inside');
 newFunction('unknown');
+newFunction('xyz');
+newFunction('abx');
+outerFunction('outer')("iner")
 
 // Output: Outer Variable: outside
 //         Inner Variable: inside
