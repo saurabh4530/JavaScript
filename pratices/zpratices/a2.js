@@ -59,7 +59,7 @@
                 min = arr[i];
             }
         }
-        return { max, min };
+        return { max, min} ;
     }
     
     let result = maxMin([12, 23, 45, 5, 68, 70, 8, 9, 10]);
@@ -108,23 +108,12 @@
         console.log(' chu hello');
 }
 
+
+{
+    var x="12";
+console.log(Number(x));
+}
 console.log("last commited");
-console.log("last commited");
-
-
-
-
-
-
-
-
-
-
-console.log("hard to learn git");
-
-console.log("not impossible");
-
-console.log("done");
 
 
 

@@ -262,6 +262,11 @@ fetch("https://65fc163914650eb2100b7e6f.mockapi.io/api/v100/user", {
     console.log(err);
   });
 
+
+//////////////////////////////////////////////
+
+
+  
 let a = {
   firstame: "samir",
   name: "samir inamdar",
@@ -292,3 +297,25 @@ fetch("https://65fc163914650eb2100b7e6f.mockapi.io/api/v100/user", {
   });
 
   console.log("updated to git");
+
+
+
+  {
+    fetch("https://65fc163914650eb2100b7e6f.mockapi.io/api/v100/user",{
+      method:"POST",
+      body:JSON.stringify({
+        firstame: "tushar ",
+        name:"patil tushar",
+        avatar:"bahubali"
+      }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    }).then((response)=>{
+      return response.json();
+    }).then((data)=>{
+      console.log(data);
+    }).catch((err)=>{
+      console.log(err);
+    })
+  }

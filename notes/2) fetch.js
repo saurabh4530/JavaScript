@@ -94,7 +94,7 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
   .then(response => {
     // Assume we don't know if the response is text or JSON
     const contentType = response.headers.get('content-type');
-    if (contentType.includes('application/json')) {
+    if (contentType.includes('applicatio/json')) {
       return response.json();
     } else {
       return response.text();

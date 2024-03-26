@@ -33,7 +33,9 @@ It's favored for its ease of use, promise-based nature, and comprehensive set of
 // For Node.js: const axios = require('axios');
 
 //! Practice on Axios 
-  
+const axios = require('axios');
+
+import axios from 'axios';
 
 // Example 1: Basic Axios Request
 // Making a GET request using Axios

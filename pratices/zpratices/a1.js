@@ -71,7 +71,7 @@
 //JavaScript Program to print first n odd numbers in descending order
 {
   function odd(n) {
-    let oddNum;
+    
     for (let i = n; i >= 1; i--) {
       if (i % 2 != 0) {
         console.log(i, "is odd");
@@ -186,7 +186,7 @@
     }
   }
 
-  console.log(perfect(28));
+  console.log(perfect(25));
 }
 
 //JavaScript Program to find remainder without using the modulus operator also find quotient without division operator
