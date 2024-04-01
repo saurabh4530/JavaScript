@@ -11,4 +11,4 @@
 
        let firstName="saurabh";
        let lastName="kakade";
-     export{firstName,lastName};
+   export{firstName,lastName};

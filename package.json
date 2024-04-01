@@ -2,6 +2,23 @@
   "dependencies": {
     "typescript": "^5.3.3",
     "type": "module"
-
-  }
+  },
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "\"javascript project\"",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saurabh4530/JavaScript.git"
+  },
+  "author": "\"saurabh\"",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saurabh4530/JavaScript/issues"
+  },
+  "homepage": "https://github.com/saurabh4530/JavaScript#readme"
 }

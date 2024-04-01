@@ -2,7 +2,7 @@
   //? find prime upto 20
   function prime(num) {
     let count;
-    for (let i = 2; i <= num; i++) {
+    for (let i = 1; i <= num; i++) {
       count = 0;
       for (let j = 2; j <= i / 2; j++) {
         if (i % j === 0) {
@@ -61,7 +61,7 @@
     let str = string.split(" ");
     let lword = "";
     for (let i = 0; i < str.length; i++) {
-      if (lword.length <str[i].length) {
+      if (lword.length < str[i].length) {
         lword = str[i];
       }
     }
@@ -144,46 +144,41 @@
   console.log(oddNum([1, 2, 3, 4, 5]));
 }
 
-
-{//? print *** at end of string
-  function string(str){
-    return str+"***";
+{
+  //? print *** at end of string
+  function string(str) {
+    return str + "***";
   }
   console.log(string("abc"));
-
-
-
 }
 {
   //? reverse Good Morning  to Output: dooG gninroM
   function reverse(string) {
-    let str=string.split(" ");
-    let reverseword=str.map((word)=>{
-      return word.split("").reverse().join("")
-    })
-   let reversestr=reverseword.join(" ");
-   return reversestr
+    let str = string.split(" ");
+    let reverseword = str.map((word) => {
+      return word.split("").reverse().join("");
+    });
+    let reversestr = reverseword.join(" ");
+    return reversestr;
   }
-console.log(reverse("Good Morning"));
+  console.log(reverse("Good Morning"));
 }
+
 {
   //? change the occarance banana by kiwi
   let arr = ["apple", "banana", "orange", "banana"];
   function replace(arr) {
     for (let i = 0; i < arr.length; i++) {
-       if(arr[i]==="banana")   {
-        arr[i]="kiwi";
-       }   
+      if (arr[i] === "banana") {
+        arr[i] = "kiwi";
+      }
     }
-    return arr
+    return arr;
   }
   console.log(replace(arr));
 }
 {
-  let arr=["jane1:1","doe:2"];
-  
-
-  
+  let arr = ["jane1:1", "doe:2"];
 }
 
 {
@@ -208,4 +203,48 @@ console.log(reverse("Good Morning"));
 
   let arr = [1, 2, [3, 4, [5, 6], 8], 9];
   console.log(concatenateNestedArray(arr)); // Output: [1, 2, 3, 4, 5, 6, 8, 9]
+}
+{
+  //Group of people object according to age
+  ////ans:
+  const people = [
+    { name: "john", age: 21 },
+    { name: "Max", age: 20 },
+    { name: "Alex", age: 20 },
+  ];
+  const Output = {
+    20: [],
+    21: [],
+  };
+
+  for (const person of people) {
+    if (person.age == 20) Output[20].push(person);
+    else Output[21].push(person);
+  }
+  console.log(Output);
+}
+{
+  const people = [
+    { name: "john", age: 21 },
+    { name: "Max", age: 20 },
+    { name: "Alex", age: 20 },
+    { name: "john", age: 25 },
+    { name: "john", age: 23 },
+  ];
+
+  const Output = {};
+
+  for (const person of people) {
+    if (!Output[person.age]) {
+      Output[person.age] = [];
+    }
+    Output[person.age].push({ name: person.name, age: person.age });
+  }
+
+  console.log(Output);
+}
+{
+ 
+
+  
 }

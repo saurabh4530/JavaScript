@@ -121,7 +121,7 @@ vowels("jairadhekrishna");
   let input=[1,2,[3,4,[5,6],8],9]
 let [v1,v2,[v3,v4,[v5,v6],v8],v9]=input
 for (let i = 0; i < input.length; i++) {
-  push(i);
+  
     
 }
 console.log([v1,v2,v3,v4,v5,v6,v8,v9]);

@@ -55,3 +55,27 @@
     
       
 }
+{
+
+  async function task() {
+    console.log("this is asyc await concept");
+    try {
+      let result1 = await fetch(
+        "https://65fc163914650eb2100b7e6f.mockapi.io/api/v100/user/3"
+      );
+      let data = await result1.json();
+      console.log(data);
+      let result2 = await fetch(
+        "https://65fc163914650eb2100b7e6f.mockapi.io/api/v100/user/2"
+      );
+      let data1 = await result2.json();
+      console.log(data1);
+
+    } catch (err) {
+      console.log(err);
+    }
+  }
+  task();
+
+
+}

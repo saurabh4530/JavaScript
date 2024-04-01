@@ -5,6 +5,7 @@ With the bind() method, an object can borrow a method from another object.
 
 The example below creates 2 objects (person and member).
 
+
 The member object borrows the fullname method from the person object:
 */
 
