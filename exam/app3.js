@@ -284,6 +284,7 @@
     return ` the most frequent element:${mostfrequent} and count is: ${maxcount}`;
   }
   console.log(frequent([2, 3, 4, 3, 4, 5, 6, 4, 2, 2, 2, 2, 2, 2]));
+  
 }
 
 {
@@ -593,4 +594,21 @@ function maxdiff(arr) {
   
 }
 console.log( maxdiff([1,3,4,6,7,8,65]))
+}
+{
+  let arr=[1,2,3,4,1,2,3,3,4,5];
+ function occurrence(arr) {
+  let obj={}
+  for (let i of arr) {
+    if(obj[i]){
+      obj[i]=obj[i]+1;
+
+    }else{
+      obj[i]=1
+    }
+    
+  }
+  console.log(obj);
+ }
+ occurrence(arr)
 }

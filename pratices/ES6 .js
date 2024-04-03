@@ -148,7 +148,7 @@ console.log(lname);
     console.log(`${key} : ${Value}`);
   }
 }
-//*? object
+//!object
 
 {
   let obj = {
@@ -247,15 +247,15 @@ console.log(` my name is ${name} , age is  ${age} and stay in  ${address}`);
 
 // Returned Values Destructuring:
 {
-  function info(){
-    return  {name:"ram", age:58, location:"india"}
+  function info(a,b,c,){
+    return  {name:a, age:b, location:c}
   }
 
-  let {name, age,location}=info();
+  let {name, age,location}=info("ram",25,"nashik");
   console.log(name, age,location);
 }
 
-// function destructure  all toic in single example
+// function destructure  all topic in single example
 {
   let user={
     name:"narendra", age:45,
