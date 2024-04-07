@@ -42,13 +42,13 @@ async function someAsycTask(){
 } 
 
 someAsycTask();
-
 console.log("Hi I am synchronous")
+
 
 
 //? Traditional way
   
-  promise.then((result) => 
+ promise.then((result) => 
       console.log("This is the :", result) 
      ).catch((error)=> console.log(error))
 

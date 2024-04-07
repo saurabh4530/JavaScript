@@ -740,3 +740,29 @@ console.log(obj.key(fname));
      console.log(key,":",value);
  }
 }
+{
+  //? concate the nested array
+
+  let arr=[1,2,3,[4,5,6,[7,8,9,[7,6,5,4],7,9],1,2],1,23,4];
+  function concate(arr) {
+    let ar=[];
+    function flat(arr) {
+      for (let i = 0; i < arr.length; i++) {
+        if (Array.isArray(arr[i])) {
+          flat(arr[i])
+          
+        } else {
+          ar.push(arr[i])
+          
+        }
+        
+      }
+      
+    }flat(arr);
+    console.log(ar);
+  }
+  concate(arr)
+}
+{
+  
+}

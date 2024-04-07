@@ -13,7 +13,3 @@ try  {
     }
 }
 fetchData();
-{
-    var if =123;
-    console.log(if);
-}

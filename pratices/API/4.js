@@ -7,4 +7,4 @@ async function fetchData() {
         console.log(err);
     }
 }
-fetchData().then(data => console.log(data)).catch(error => console.error(error));
+ fetchData().then(data => console.log(data)).catch(error => console.error(error));

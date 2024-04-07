@@ -2,7 +2,7 @@
   //? find prime upto 20
   function prime(num) {
     let count;
-    for (let i = 1; i <= num; i++) {
+    for (let i = 2; i <= num; i++) {
       count = 0;
       for (let j = 2; j <= i / 2; j++) {
         if (i % j === 0) {
@@ -141,7 +141,7 @@
     return oddNumbers;
   }
 
-  console.log(oddNum([1, 2, 3, 4, 5]));
+  conssole.log(oddNum([1, 2, 3, 4, 5]));
 }
 
 {
@@ -204,25 +204,10 @@
   let arr = [1, 2, [3, 4, [5, 6], 8], 9];
   console.log(concatenateNestedArray(arr)); // Output: [1, 2, 3, 4, 5, 6, 8, 9]
 }
-{
+
   //Group of people object according to age
   ////ans:
-  const people = [
-    { name: "john", age: 21 },
-    { name: "Max", age: 20 },
-    { name: "Alex", age: 20 },
-  ];
-  const Output = {
-    20: [],
-    21: [],
-  };
 
-  for (const person of people) {
-    if (person.age == 20) Output[20].push(person);
-    else Output[21].push(person);
-  }
-  console.log(Output);
-}
 {
   const people = [
     { name: "john", age: 21 },

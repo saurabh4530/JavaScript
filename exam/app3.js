@@ -142,9 +142,9 @@
   let arr = [99, 2, 3, 4, 5, 6, 7, 8, 2];
   console.log(arr.lastIndexOf(2));
   function lastIndex(arr, element) {
-    for (let index = arr.length - 1; index >= 0; index--) {
-      if (arr[index] === element) {
-        return index;
+    for (let i = arr.length - 1; i >= 0; i--) {
+      if (arr[i] === element) {
+        return i;
       }
     }
   }
@@ -264,26 +264,26 @@
   }
 }
 {
-  //?18.	Write a function that returns the most frequently occurring element in an array.
-  function frequent(arr) {
-    let maxcount = 0;
-    let count;
-    let mostfrequent;
-    for (let i = 0; i < arr.length; i++) {
-      count = 0;
-      for (let j = 0; j < arr.length; j++) {
-        if (arr[i] === arr[j]) {
-          count++;
+    //?18.	Write a function that returns the most frequently occurring element in an array.
+    function frequent(arr) {
+      let maxcount = 0;
+      let count;
+      let mostfrequent;
+      for (let i = 0; i < arr.length; i++) {
+        count = 0;
+        for (let j = 0; j < arr.length; j++) {
+          if (arr[i] === arr[j]) {
+            count++;
+          }
+        }
+        if (count > maxcount) {
+          maxcount = count;
+          mostfrequent = arr[i];
         }
       }
-      if (count > maxcount) {
-        maxcount = count;
-        mostfrequent = arr[i];
-      }
+      return ` the most frequent element:${mostfrequent} and count is: ${maxcount}`;
     }
-    return ` the most frequent element:${mostfrequent} and count is: ${maxcount}`;
-  }
-  console.log(frequent([2, 3, 4, 3, 4, 5, 6, 4, 2, 2, 2, 2, 2, 2]));
+    console.log(frequent([2, 3, 4, 3, 4, 5, 6, 4, 2, 2, 2, 2, 2, 2]));
   
 }
 

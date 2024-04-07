@@ -1,9 +1,34 @@
 //! VVIMP MEthods
+{
+   
+     let arr = [1, 2, [3,[99,[100,[15767,[6]]]], 4, 8], 9];
+
+
+    function flat(arr) {
+     let ar=[];
+     function flatten(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            if (Array.isArray(arr[i])) {
+                flatten(arr[i])
+            } else {
+                ar.push(arr[i])
+            }
+            
+        }
+     } flatten(arr)
+return ar
+    }
+    
+ console.log(flat(arr));
+
+    
+    
+}
+
 // map()      filter()     reduce()
 
-// Sytac for any array methods.
+// Syntx for any array methods.
 // arrayName.method(someArguments);
-
 
 /*
 ! 1. `map()` Method
@@ -15,68 +40,60 @@ Syntax:
 let newArray = array.map(function(currentValue, index, arr), thisValue);
 
 todo Example: Suppose you have  an array of product prices and you want to apply a discount to each price. `map()` can be used to create a new array of discounted prices.
+{
+  
+}
 
 */
-
-
 
 //! Basic Map Examples
 
 //? Writing callback method inside map call.
 
-var arr = [1,2,3,4,5,6];
+var arr = [1, 2, 3, 4, 5, 6];
 
-let mapArray = arr.map(
-    function add(currentValue, index, array){
-        return currentValue * 2;
-    }
-);
+let mapArray = arr.map(function add(currentValue, index, array) {
+  return currentValue * 2;
+});
 
 console.log(mapArray);
-console.log("my old array after map : ", arr)
-
+console.log("my old array after map : ", arr);
 
 //? Writing callback method outside map and sending its definition as a callback.
 
-var arr = [1,2,3,4,5,6];
+var arr = [1, 2, 3, 4, 5, 6];
 
 let mapArray2 = arr.map(add);
 
-function add(currentValue, index, array){
-    return currentValue * 2;
+function add(currentValue, index, array) {
+  return currentValue * 2;
 }
 
 console.log(mapArray2);
-console.log("my old array after map : ", arr)
-
+console.log("my old array after map : ", arr);
 
 //? Writing callback method outside map and using all the parameters passed to the callback function.
 
-var arr = [1,2,3,4,5,6];
+var arr = [1, 2, 3, 4, 5, 6];
 
 let mapArray3 = arr.map(add);
 
-function add(currentValue, index, array){
-    let newValue;
+function add(currentValue, index, array) {
+  let newValue;
 
-    if(index < (array.length - 1) ){
-        newValue = array[index] + array[index +1];
-    }else{
-        newValue = currentValue + array[0]; 
-    }
+  if (index < array.length - 1) {
+    newValue = array[index] + array[index + 1];
+  } else {
+    newValue = currentValue + array[0];
+  }
 
-    return newValue;
+  return newValue;
 }
 
 console.log(mapArray3);
-console.log("my old array after map : ", arr)
-
-
-
+console.log("my old array after map : ", arr);
 
 // mapArray = [2,4,6,8,10,12];
-
-
 
 /*
 
@@ -94,7 +111,7 @@ let newArray = array.filter(function(currentValue, index, arr), thisValue);
 */
 //? filterArray = [2,4,6,8,10];
 
-var arr = [1,2,3,4,5,6,7,8,9,10];
+var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 let filterArray = arr.filter(filterEven);
 
@@ -107,34 +124,31 @@ let filterArray = arr.filter(filterEven);
 //     }
 // }
 
-
-function filterEven(value, index, array){
-    return value%2 === 0;
+function filterEven(value, index, array) {
+  return value % 2 === 0;
 }
 
-console.log("This is filtered Array :" , filterArray);
-console.log("This is orignal Array :" , arr);
-
+console.log("This is filtered Array :", filterArray);
+console.log("This is orignal Array :", arr);
 
 //? Using all the params in the callback function'
 
 //? filterArray = [2,4,6,8,10];
 
-var arr = [1,2,3,4,5,6,7,8,9,10];
+var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 let filterArray2 = arr.filter(filterEven);
 
-function filterEven(value, index, array){
-    if(index%2 === 0){
-        return true;
-    }else{
-        return false;
-    }
+function filterEven(value, index, array) {
+  if (index % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
-console.log("This is filtered Array :" , filterArray2);
-console.log("This is orignal Array :" , arr);
-
+console.log("This is filtered Array :", filterArray2);
+console.log("This is orignal Array :", arr);
 
 /*
 
@@ -163,56 +177,50 @@ Syntax explained.
 */
 // let singleValue = array.reduce(function(total, currentValue, currentIndex, arr), initialValue);
 
-// 
+//
 
-var arr = [1,2,3,4,5,6,7,8,9,10];
+var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 let reduceArray = arr.reduce(summation, 5);
- 
-function summation(total, currentValue, currentIndex, arr){
 
+function summation(total, currentValue, currentIndex, arr) {
+  console.log("Total :", total);
+  console.log("Current Value :", currentValue);
+  console.log("Current Index :", currentIndex);
 
-    console.log("Total :", total);  
-    console.log("Current Value :", currentValue);
-    console.log("Current Index :", currentIndex);
-
-    let sum = total + currentValue;
-    console.log("Sum :", sum);
-    return sum;
+  let sum = total + currentValue;
+  console.log("Sum :", sum);
+  return sum;
 }
 
-console.log("This is Reduced Value :" , reduceArray);
-console.log("This is orignal Array :" , arr);
-
+console.log("This is Reduced Value :", reduceArray);
+console.log("This is orignal Array :", arr);
 
 // Rohit's amazon cart.
 
-// let cart = [{ 
-    //     item: "MObile",
-    //     price: 20000
-    // },
-    // { 
-    //     item: "MObile",
-    //     price: 20000
-    // },{ 
-    //     item: "MObile",
-    //     price: 20000
-    // },{ 
-    //     item: "MObile",
-    //     price: 20000
-    // },{ 
-    //     item: "MObile",
-    //     price: 20000
-    // },{ 
-    //     item: "MObile",
-    //     price: 20000
-    // },
-    // ];
-    
-    
-    // console.log(cart.map((item)=>item.price).reduce((t,cv)=>t+cv));
-    
-    
+// let cart = [{
+//     item: "MObile",
+//     price: 20000
+// },
+// {
+//     item: "MObile",
+//     price: 20000
+// },{
+//     item: "MObile",
+//     price: 20000
+// },{
+//     item: "MObile",
+//     price: 20000
+// },{
+//     item: "MObile",
+//     price: 20000
+// },{
+//     item: "MObile",
+//     price: 20000
+// },
+// ];
+
+// console.log(cart.map((item)=>item.price).reduce((t,cv)=>t+cv));
 
 /*
 ! 4. `forEach()` Method
@@ -223,33 +231,28 @@ Syntax:
     array.forEach(function(currentValue, index, arr), thisValue);
 */
 
-
-
-var arr = [1,2,3,4,5,6];
+var arr = [1, 2, 3, 4, 5, 6];
 
 let forEachArray3 = arr.forEach(add);
 
-function add(currentValue, index, array){
-    let newValue;
+function add(currentValue, index, array) {
+  let newValue;
 
-    if(index < (array.length - 1) ){
-        newValue = array[index] + array[index +1];
-    }else{
-        newValue = currentValue + array[0]; 
-    }
-    
-    console.log(newValue);    
-    // array[index] = newValue;
+  if (index < array.length - 1) {
+    newValue = array[index] + array[index + 1];
+  } else {
+    newValue = currentValue + array[0];
+  }
 
-    return newValue; // No use of this returned value because forEach will not return any array or value after called.
-    // forEach is truly only itterator.
+  console.log(newValue);
+  // array[index] = newValue;
+
+  return newValue; // No use of this returned value because forEach will not return any array or value after called.
+  // forEach is truly only itterator.
 }
 
 console.log(forEachArray3);
-console.log("my old array after forEach : ", arr)
-
-
-
+console.log("my old array after forEach : ", arr);
 
 /*
 !Example: Printing/logging each element of an array.
@@ -265,27 +268,25 @@ Syntax:
 let result = array.every(function(currentValue, index, arr), thisValue);
 */
 
-let everyArr = [2,4,6,8,11,0,12,14,16];
+let everyArr = [2, 4, 6, 8, 11, 0, 12, 14, 16];
 
-function checkAllEven(value, index, array){
-    console.log(value%2 == 0);
-    if(value%2 == 0){
-        return true;
-    }else{
-        return false;
-    }
+function checkAllEven(value, index, array) {
+  console.log(value % 2 == 0);
+  if (value % 2 == 0) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 let everyResult = everyArr.every(checkAllEven);
-console.log("Result of Every: ",everyResult);
-
+console.log("Result of Every: ", everyResult);
 
 // function every(){
 //     everyresults = [true, true, true, false]
 
 //     return false;
 // }
-
 
 /*
 !Example: Checking if every student in a class has passed the exam.
@@ -298,24 +299,19 @@ Syntax:
 let result = array.some(function(currentValue, index, arr), thisValue);
 */
 
+let someArr = [2, 4, 6, 8, 11, 0, 12, 14, 16];
 
-
-let someArr = [2,4,6,8,11,0,12,14,16];
-
-function checkSomeOdd(value, index, array){
-    console.log(value%2 !== 0);
-    if(value%2 !== 0){
-        return true;
-    }else{
-        return false;
-    }
+function checkSomeOdd(value, index, array) {
+  console.log(value % 2 !== 0);
+  if (value % 2 !== 0) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 let someResult = someArr.some(checkSomeOdd);
-console.log("Result of some: ",someResult);
-
-
-
+console.log("Result of some: ", someResult);
 
 /*
 !Example: Checking if there are any products in a list that are out of stock.
@@ -330,19 +326,18 @@ let found = array.find(function(currentValue, index, arr), thisValue);
 
 let findArr = ["Shubham", "Rohit", "Deepak", "Vinay", "Tushar", "Maroti"];
 
-function findInArr(value){
-    return value.length >= 8;
+function findInArr(value) {
+  return value.length >= 8;
 }
 
 let findResult = findArr.find(findInArr);
 console.log(findResult);
 
-if(findResult){
-    console.log(findResult)
-}else{
-    console.log("No element found")
+if (findResult) {
+  console.log(findResult);
+} else {
+  console.log("No element found");
 }
-
 
 /*
 !Example: Finding the first student in a list who has scored above 90%.
@@ -358,12 +353,10 @@ let lastIndex = array.lastIndexOf(item, start);
 
 let indexOfArr = ["Shubham", "Rohit", "Deepak", "Vinay", "Tushar", "Maroti"];
 
-let indexOfResult = indexOfArr.indexOf("Deepak" );
+let indexOfResult = indexOfArr.indexOf("Deepak");
 console.log(indexOfResult);
 
 // eg todo - Finding the index of numbers and strings.
-
-
 
 /*
 !Example: Finding the position of a specific item in a shopping list.
@@ -378,25 +371,22 @@ Syntax:
 let singleValue = array.reduceRight(function(total, currentValue, currentIndex, arr), initialValue);
 */
 
-
-var arr = [1,2,3,4,5,6,7,8,9,10];
+var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 let reduceRightArray = arr.reduceRight(summation, 5);
- 
-function summation(total, currentValue, currentIndex, arr){
-    console.log("Total :", total);  
-    console.log("Current Value :", currentValue);
-    console.log("Current Index :", currentIndex);
 
-    let sum = total + currentValue;
-    console.log("Sum :", sum);
-    return sum;
+function summation(total, currentValue, currentIndex, arr) {
+  console.log("Total :", total);
+  console.log("Current Value :", currentValue);
+  console.log("Current Index :", currentIndex);
+
+  let sum = total + currentValue;
+  console.log("Sum :", sum);
+  return sum;
 }
 
-console.log("This is ReduceRightd Value :" , reduceRightArray);
-console.log("This is orignal Array :" , arr);
-
-
+console.log("This is ReduceRightd Value :", reduceRightArray);
+console.log("This is orignal Array :", arr);
 
 /*
 !Example: Calculating the total from right to left in a sequence of transactions.
@@ -415,17 +405,16 @@ These methods are fundamental in  for manipulating arrays and are widely used in
  purposes like data manipulation, filtering, transformation, and aggregation.
  */
 
- let toBeArray = "Shubham";
- let obj = {
-    fname : 'Shubham',
-    lname : 'Sonar'
- }
+let toBeArray = "Shubham";
+let obj = {
+  fname: "Shubham",
+  lname: "Sonar",
+};
 
- let convertedArr = Array.from(toBeArray);
- console.log(convertedArr);
- 
- console.log(Array.from(obj));
+let convertedArr = Array.from(toBeArray);
+console.log(convertedArr);
 
+console.log(Array.from(obj));
 
 /*
 
@@ -446,49 +435,38 @@ console.log(arrSort);
 
 */
 
-let reverseArr = [1,2,3,4,5,6,7,8];
+let reverseArr = [1, 2, 3, 4, 5, 6, 7, 8];
 reverseArr.reverse();
 console.log(reverseArr);
-
 
 // Find if the string is palindrome or not.
 
 let str = "madam";
 
-function checkPalindrome(str){
+function checkPalindrome(str) {
+  return str == Array.from(str).reverse().join("");
 
-    return str == Array.from(str).reverse().join(""); 
+  // This is happening in the background.
 
-// This is happening in the background.
-
-    // "mam" == ['m','a','m'].reverse();
-    // "mam" == ['m','a','m'].join("");
-    // "mam" == "mam";
-    // true;
-    // return true;
+  // "mam" == ['m','a','m'].reverse();
+  // "mam" == ['m','a','m'].join("");
+  // "mam" == "mam";
+  // true;
+  // return true;
 }
 
 console.log("Is string Palindrome: ", checkPalindrome(str));
 
-
 // Polyfill of Join.
 
-function join(arr){
-    let joinedStr= "";
-    for(let value of arr){
-        joinedStr += value;
-    }
-    return joinedStr;
+function join(arr) {
+  let joinedStr = "";
+  for (let value of arr) {
+    joinedStr += value;
+  }
+  return joinedStr;
 }
 
-console.log(join(['s','o','n','a','r']));
-
+console.log(join(["s", "o", "n", "a", "r"]));
 
 // Find whether to strings has same letters and number of letters
-
-
-
-
-
-
-

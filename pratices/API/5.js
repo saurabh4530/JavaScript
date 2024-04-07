@@ -319,3 +319,22 @@ fetch("https://65fc163914650eb2100b7e6f.mockapi.io/api/v100/user", {
       console.log(err);
     })
   }
+
+
+{
+  fetch("https://65fc163914650eb2100b7e6f.mockapi.io/api/v100/user",{
+    method:"POST",
+   body:JSON.stringify({
+    firstame: "sam ",
+    name:"inamdar sam",
+    avatar:"hero"
+    
+   }),
+   headers:{
+    "Content-type":"application/json;charset=UTF-8"
+
+   }
+  }).then(res=>res.json())
+  .then(data=>console.log(data))
+  .catch(err=>console.error(err))
+}
