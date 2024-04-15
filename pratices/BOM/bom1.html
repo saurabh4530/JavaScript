@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1><center>window in js</center></h1>
+<button id="btn1">Google</button>
+<button id="btn2"> Yahoo</button>
+<button id="btn3">close pop</button>
+    <script>
+        let btn1=document.getElementById("btn1");
+        let btn2=document.getElementById("btn2");
+        let btn3=document.getElementById("btn3");
+        let url="https://www.google.com";
+        let features="height=500,width=500";
+        let win
+
+        btn1.addEventListener("click",()=>{
+            win=window.open(url,"google",features)
+        })
+        btn2.addEventListener("click",()=>{
+           win= window.open("https://www.yahoo.com","google",features)
+        })
+        btn3.addEventListener("click",()=>{
+            win.close();
+        })
+
+
+    </script> 
+
+
+<hr>
+<hr>
+<h2><center>location object</center></h2>
+<p>check console output
+
+</p>
+<button id="btn">"click me"</button>
+<script>
+let btn=document.getElementById("btn");
+btn.addEventListener("click",()=>{
+    // window.location="https://www.google.com"
+    // location.href="https://www.google.com"
+// location.assign("https://www.google.com")
+// location.replace("https://www.google.com")
+     location.reload();
+
+})
+
+</script>
+</body>
+</html>

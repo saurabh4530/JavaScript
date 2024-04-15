@@ -9,3 +9,7 @@ console.log("division :", div(6,3));
 let {multiplication,substraction}=require("./math.js")
 console.log("multiplication: ", multiplication(25,20));
 console.log("substraction",substraction(10,5));
+
+
+
+

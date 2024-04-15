@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2><center>problem 1: click on btn to change textContent on every click</center></h2>
+    <button id="btn">click here</button>
+
+    <script>
+        let arr=["priya","mahesh","ruhsi","saurabh","lokesh"]
+        let currindex=0;
+        let b=document.getElementById("btn");
+        b.addEventListener("click",()=>{
+            b.textContent=arr[currindex];
+            currindex=(currindex+1)%arr.length
+        })
+    </script>
+<hr>
+    <h2><center>problem 2: convert the arrray element into list using dom</center></h2>
+
+ <script>
+ let div=document.createElement("div");
+ let ul=document.createElement("ul");
+ let arrr=["ram","sham","narushet","lokesh","saurabh"];
+ arr.forEach((item)=>{
+    let li=document.createElement("li");
+
+    li.textContent=item;
+    ul.appendChild(li)
+ });
+ div.appendChild(ul); 
+ document.body.appendChild(div);
+ </script>
+ 
+</body>
+</html>
