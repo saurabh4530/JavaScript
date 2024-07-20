@@ -11,7 +11,7 @@
         }
         #mydiv{
             padding:50px ;
-            background: #0c011b;
+            background: #430994;
         }
     </style>
 </head>
@@ -21,13 +21,16 @@
         <button id="btn">click me</button>
     </div>
     <script>
+        // whe
         //this is event bubling and bydefault useCapture is false..
         let b=document.getElementById("btn");
         let d=document.getElementById("mydiv");
+
         b.addEventListener("click",(event)=>{
             console.log("btn clicked");
-            event.stopPropagation();
+          //  event.stopPropagation();
         })
+
         d.addEventListener("click",()=>{
             console.log("div clicked");
         })

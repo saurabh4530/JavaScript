@@ -141,7 +141,7 @@
     return oddNumbers;
   }
 
-  conssole.log(oddNum([1, 2, 3, 4, 5]));
+  console.log(oddNum([1, 2, 3, 4, 5]));
 }
 
 {

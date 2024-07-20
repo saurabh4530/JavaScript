@@ -43,7 +43,7 @@
     <script>
         let textbox=document.getElementById("textbox")
 
-        textbox.addEventListener("input",function(){
+        textbox.addEventListener("input",()=>{
             var text=this.value;
             let char=text.length;
             document.getElementById("char").innerHTML=char;

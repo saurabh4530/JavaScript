@@ -8,6 +8,7 @@ function clock() {
     let now=new Date();
     let diff=(end-now)/1000;
    if (diff<0) {
+   
     return ;
     
    }

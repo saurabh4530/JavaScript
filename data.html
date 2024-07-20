@@ -17,8 +17,8 @@
 </head>
 <body>
 
+  <button id="submitBtn">Submit</button>
 <div id="counting">Counting...</div>
-<button id="submitBtn">Submit</button>
 <hr>
 
 
@@ -42,7 +42,7 @@ document.getElementById('submitBtn').addEventListener('click', function() {
       clearInterval(countingInterval);
       countingDiv.textContent = 'Processing completed.';
     }
-  }, 50); // Adjust speed of counting here (milliseconds)
+  }, 100); // Adjust speed of counting here (milliseconds)
 });
 
 
@@ -59,8 +59,7 @@ function getLocation()  {
 }
 
 function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude + 
-  "<br>Longitude: " + position.coords.longitude;
+  x.innerHTML = "Latitude: " + position.coords.latitude +  "<br>Longitude: " + position.coords.longitude;
 }
 </script>
 

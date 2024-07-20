@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><center>couter</center></h1>
+
+ <button id ="btn">click me</button>
+ <br>
+ <br>
+ <div id="div" style="height: 20px ;width: 30px; border: 1px solid black"></div>
+ <script>
+let btn=document.getElementById("btn");
+let div=document.getElementById("div")
+
+let count=0;
+btn.addEventListener("click",()=>{
+    count++;
+    div.innerText=count
+})
+ </script>
+ <hr> 
+
+
+ 
+</body>
+</html>
