@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fetch API Example</title>
+</head>
+<body>
+  <h1>Fetch API Example</h1>
+  <div id="data"></div>
+
+  <script>
+    fetch('https://65fc163914650eb2100b7e6f.mockapi.io/api/v100/user', {
+      method: 'DELETE'
+    })
+      .then(response => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error('Error fetching data');
+        }
+      })
+      .then(data => {
+        console.log(data);
+        document.getElementById('data').innerHTML = JSON.stringify(data, null, 2);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        document.getElementById('data').innerHTML = 'Error: ' + error.message;
+      });
+  </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fetch Data with DELETE Method</title>
+</head>
+<body>
+  <h1>Fetch Data with DELETE Method</h1>
+  <button id="fetch-btn">Fetch Data</button>
+  <div id="output"></div>
+
+  <script>
+    const fetchBtn = document.getElementById('fetch-btn');
+    const outputDiv = document.getElementById('output');
+
+    fetchBtn.addEventListener('click', fetchData);
+
+    function fetchData() {
+      fetch('http://localhost:3000/data', {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      .then(response => response.json())
+      .then(data => {
+        outputDiv.innerHTML = `Name: ${data.name}, Age: ${data.age}`;
+      })
+      .catch(error => console.error(error));
+    }
+  </script>
+</body>
+</html>
